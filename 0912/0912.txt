@@ -1,0 +1,66 @@
+공유주소
+\\192.168.71.200
+
+
+웨일온
+웨일온 전용회의실
+
+회의 ID: 210 841 1211
+비밀번호: 174424
+
+https://whaleon.us/o/CSqqEb/483e7266af284010a0c3568c26acdef2
+
+구글에서 vscode를 다운로드 - 설치
+
+
+
+0912
+
+lable , input 세트
+lable에 width 와 float를 주면 넓이를 가질 수 있다.
+input 창은 네모박스
+
+<label for="r-name"> id="r-name"> id가 들어가면 이름이라는 글씨를 클릭해도 박스에 자동입력가능(편의성)
+
+블럭요소(ex = h1,p,div...) 
+넓이가 있다. 줄바뀜도 있다.
+
+인라인요소(ex = span,strong,em...)
+넓이가 없다. float를 주면 넓이와 높이를 줄 수 있다.
+
+인라인블럭(ex=이미지, input은 사진과 비슷) 
+줄바뀜은 없으나 넓이와 높이가 존재함
+
+
+cols="40" rows="4" rows 줄 cols 칸
+
+<fieldset>
+            <legend>배송정보</legend> \\ 선 사이의 글씨를 쓸 수 있게끔 해줌.
+
+value="상품용 3kg"> 박스안에 값을 넣을 수 있음.
+
+placeholder="-빼고 입력(01000000000)"> \\  안내글
+
+<div id="buttons"> ↓↓↓↓↓↓↓↓↓
+            <input type="submit" value="주문하기">
+            <input type="reset" value="취소하기">  버튼을 생성 할 수 있음.
+
+required  == 필수입력 사항으로 만들어줌. ↓↓↓↓↓↓↓↓
+ex== (( <label for="user-name">이름</label>
+                    <input type="text" name="user-name" id="user-name" required>))
+
+checkbox == 중복 선택 가능
+
+<label><input type="checkbox" value="f_5">가족용 5kg</label>
+            <input type="number">개
+
+radio == 중복 선택 불가능
+
+<label><input type="radio" name="gift" value="yes">선물포장</label>
+
+<input type="datetime-local" name="" id="">  == 우리나라로 시간 조정 (local) 안할시 미국시간으로 지정.
+
+ size="6" id="class" multiple> ==박스 선택지에 여러개를 보여주는
+
+
+

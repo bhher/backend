@@ -1,0 +1,61 @@
+구글에서 무료이미지 
+
+https://pixabay.com/ko/
+
+강아지로 검색
+
+1280px 크기를 다운로드
+
+포토샵을 엽니다.
+
+사진을 file - open  dog1  ~ dog4
+
+왼쪽에 툴바에서 크롭툴선택
+상다 메뉴밑에 옵션에서 W x H x Resolution
+  200 X 150 X 72
+적당한 크기를 선택해서 자른다.
+file - save as - d1.jpg
+
+학습1
+  
+https://pixabay.com/ko/   
+고양이 검색후
+다운받고 
+cat1, cat2 이름바꾼후
+포토샵에서 
+
+  300 X 200 X 72
+
+c1, c2,c3,c4 저장후
+html에 작성후 화면으로 출력해 보세요
+
+https://www.easyspub.co.kr/20_Menu/BookList/A001/PUB
+it 전문서
+
+
+https://www.easyspub.co.kr/20_Menu/BookList/C000/PUB
+전자책보기
+
+
+인터넷 프로필 올리기
+닷홈에 가입한다.
+
+
+닷홈 메뉴 - 웹호스팅 - 무료호스팅
+
+호스팅신청후 - 마이닷홈으로 이동
+
+
+파일질라 설치 
+사이트 관리자 클릭
+
+
+
+
+
+
+
+
+
+
+

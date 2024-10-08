@@ -1,0 +1,68 @@
+header{
+    width:80%;
+    background-color: #069;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* header를 중앙정렬 */
+    overflow: hidden;
+    /* 자식이 float되면 부모에게  
+    overflow 주어야 높이가 유지됨*/
+}
+header h1{
+    width:40%;
+    float:left;
+    color:#fff;
+}
+header nav {
+	width:60%;
+	float:right;	
+}
+nav ul{
+    list-style: none;
+}
+/* 블릿없애기 */
+nav ul li{
+    display: inline;
+    float:left;
+    margin: 15px;
+}
+nav ul li a{
+    color:white;
+    /* 메뉴 글자색 */
+    text-decoration: none;
+    /* 밑줄없애기 */
+}
+
+section{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #333;
+    padding: 5px;
+}
+section article{
+    width:90%;
+    height:auto;
+    margin: 20px 10px;
+    padding: 20px;
+}
+#pet1{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#pet2{
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+#pet3 {
+    border:3px double green;
+    border-top-left-radius:30px;
+    border-bottom-right-radius:30px;
+}
+article h3{
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+
+}

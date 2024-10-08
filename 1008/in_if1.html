@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var id = "easy1004";
+	var pw = "112233";
+	var user_id = prompt("아이디는?","");
+	var user_pw = prompt("비밀번호는?","");
+	if(id == user_id) {
+		if(pw == user_pw) {
+				document.write(user_id+"님 반갑습니다!");
+		} else {
+				alert("비밀번호가 일치하지 않습니다."); //경고창
+				location.reload();//새로고침
+		}
+	} else {
+		alert("아이디가 일치하지 않습니다.");
+		location.reload();
+	}
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

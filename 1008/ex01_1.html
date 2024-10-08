@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+var price1 = Number(prompt("교통비?","0"));
+var price2 = Number(prompt("식비?","0"));
+var price3 = parseInt(prompt("음료비?","0"));
+//prompt 입력받으면 문자 3000 되는데 Number, parseInt 사용해서 숫자로 변환
+
+var total = price1 + price2 + price3; //전체합계
+var result = total > 10000 ? total - 10000 + "원 초과" :"돈관리잘했어요";
+
+document.write(result);
+
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

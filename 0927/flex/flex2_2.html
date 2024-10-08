@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.flex-container{
+    width: 1500px;
+    background-color: dodgerblue;
+    display: flex;
+    /* flex-wrap: nowrap; 넘쳐도 한줄로 표시 (생략가능) */
+    /* flex-wrap:wrap;  넘치면 줄바꿈 */
+    /* flex-wrap: wrap-reverse; 540p 참고 */
+    justify-content: space-evenly; /*중앙을 기준으로 배치 참고 544p*/
+    
+}
+.flex-container > div{
+    background-color: #f1f1f1;
+    width:100px;
+    /* margin: 10px;  */
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    
+}
+
+/* flex-start : 기본값으로 justify-content가 지정 되지 않은 경우 이것이 기본정렬
+flex-end : flext 컨테이너의 끝에 요소를 정렬한다. 행의 경우 오른쪽 끝, 열의 경우 하단 끝 
+space-between : 요소사이에 추가 공간을 두고 첫 번째 요소와 마지막 요소는 가장 자리로 밀려난다.
+            예를 들어 첫번째 항목은 컨테이너의 왼쪽에, 마지막 항목은 컨테이너의 오른쪽에 나머지 공간은 다른 요소에 균등하게 배분
+space-around : space-between와 비슷하지만 첫번째 요소와 마지막 요소가 컨테이너의 가장자리에 고정되어 있지 않다.
+             공간은 flex 컨테이너의 양쪽 끝에 절반의 공간을 두고 모든 항목 주위에 분산 된다.
+space-evenly : flex 컨테이너의 양쪽 끝에 전체 공간을 두고 flex 요소 사이에 공간을 균등하게 분배 */
+
+
+</style>
+</head>
+<body>
+    <h1>Flexiable Boxes</h1>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>

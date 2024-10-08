@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+table{
+    border:1px solid #333;
+    border-collapse: collapse;
+    /* 두개의 선을 합침 */
+    text-align: center;
+}
+td{
+    border:1px solid #333;
+    padding: 10px 20px;
+    /* 안여백 위아래 10 좌우 20 */
+}
+</style>
+</head>
+<body>
+    <table>
+        <caption>표제목(캡션)</caption> 
+        <colgroup>
+            <col style="width:150px;">
+            <col style="width:150px;">
+            <col style="width:300px;">
+        </colgroup>
+
+        <tr>
+            <td rowspan="3">개인정보</td>
+            <td>이름</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>학과/학번</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>연락처</td>
+            <td></td>
+        </tr>
+        <tr style="height: 200px;">
+            <td>지원분야</td>
+            <td colspan="2"></td>
+           
+        </tr>
+    </table>
+</body>
+</html>

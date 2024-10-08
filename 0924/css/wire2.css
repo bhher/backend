@@ -1,0 +1,58 @@
+*{margin: 0;padding:0;}
+#wrap{
+    width:1000px;
+    height:650px;
+}
+header{
+    width: 200px;
+    height:650px;
+    background-color: pink;
+    float:left;
+}
+#main{
+    width:800px;
+    height:650px;
+    background-color: hotpink;
+    float:left;
+}
+#main #img_slide{
+    width: 100%;
+    height:350px;
+    background-color: aqua;
+}
+section{
+    width: 100%;
+    height:200px;
+    background-color: yellow;
+}
+section article{
+    width:33.33%;
+    height:200px;
+    float: left;
+}
+section article.notice{background-color: tan;}
+section .banner{background-color: orange;}
+.icons{background-color: yellowgreen;}
+footer{
+    width:100%;
+    height:100px;
+    background-color: yellow;
+}
+footer .f_logo{
+    width:150px;
+    height:100px;
+    background-color: #999;
+}
+footer .f_menu{
+    width:650px;
+    height:50px;
+    background-color: #777;
+}
+footer .f_copy{
+    width:650px;
+    height:50px;
+    background-color: #555;
+}
+footer article{
+    float: left;
+}

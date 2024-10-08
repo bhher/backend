@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin:0;padding:0;}
+    ul{list-style:none;}
+    a{text-decoration:none;color:#333;}
+    section{
+        width:700px;
+        height:500px;
+        border:1px solid #333;
+        margin: 100px auto 0;
+        position: relative;
+    }
+    .gnb li a{
+        display: block;
+        width:150px;
+        height:40px;
+        line-height: 40px;
+        background-color: #ccc;
+        text-indent: 20px;
+        /* 들여쓰기 */
+    }
+    .gnb>li>a{
+        background-color: #915959;
+        color: #fff;
+    }
+    .gnb>li{
+      
+    }
+
+    .gnb li ul{
+        position: absolute;
+        top:0;
+        left:150px;
+        display: none;
+    }
+    .gnb li:hover ul{
+        display: block;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <section>
+        <ul class="gnb">
+        <li><a href="#">MENU-1</a>
+            <ul>
+                <li><a href="#">SubMenu-1</a></li>
+                <li><a href="#">SubMenu-2</a></li>
+                <li><a href="#">SubMenu-3</a></li>
+                <li><a href="#">SubMenu-4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU-2</a>
+            <ul>
+                <li><a href="#">submenu-1</a></li>
+                <li><a href="#">submenu-2</a></li>
+                <li><a href="#">submenu-3</a></li>
+                <li><a href="#">submenu-4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU-3</a>
+            <ul>
+                <li><a href="#">SUBMenu-1</a></li>
+                <li><a href="#">SUBMenu-2</a></li>
+                <li><a href="#">SUBMenu-3</a></li>
+                <li><a href="#">SUBMenu-4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">MENU-4</a>
+            <ul>
+                <li><a href="#">서브Menu-1</a></li>
+                <li><a href="#">서브Menu-2</a></li>
+                <li><a href="#">서브Menu-3</a></li>
+                <li><a href="#">서브Menu-4</a></li>
+            </ul>
+        </li>
+    </ul>
+    </section>
+</body>
+</html>

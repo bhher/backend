@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+*{margin: 0;padding: 0;}
+.box{
+    width:200px;
+    height:200px;
+    border: 1px dotted red;
+    position: absolute;
+    left:100px;
+    top:100px;
+}
+.line {
+    position: absolute;
+    width:160px;
+    height:3px;
+    background-color: #333;
+    top:50px;
+    left:20px;
+}
+.line1{
+    transform-origin: left center;
+    /* 중심회 */
+    transform: rotate(-20deg);
+}
+.line2{
+    top:100px;
+    transform: rotate(0deg);
+}
+.line3{
+    transform-origin: left center;
+    top:150px;
+    transform: rotate(20deg);
+}
+
+
+</style>
+</head>
+<body>
+    <div class="box">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+    </div>
+</body>
+</html>

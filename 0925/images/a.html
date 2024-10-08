@@ -1,0 +1,238 @@
+<!DOCTYPE HTML>
+<html lang="ko-KR">
+<head>
+   <meta charset="UTF-8">
+   <title>layout_img</title>
+<style>
+*{margin:0;padding:0;}
+.wrap{
+   width:1200px;
+   padding:30px 0;
+   border:1px solid #336699;
+   margin:0 auto;
+}
+.bigbox{
+   width:1000px;
+   height:300px;
+   border:1px solid #9966cc;
+   margin:0 auto;
+   margin-top:20px;
+   
+}
+.bigbox h2{
+   text-align:center;
+   padding:10px 0;
+   text-align:center;
+}
+.bigbox .box {
+   width:200px;
+   height:150px;
+   border:3px solid #f66399;
+   float:left;
+   margin-left:35px;
+   
+}
+
+.bigbox2 .box{
+   overflow:hidden;
+}
+.bigbox2 .box img{
+   margin-top:0;
+   transition:all 0.3s;
+}
+.bigbox2 .box:hover img{
+   margin-top:-150px;
+}
+
+.bigbox3 .box{
+   overflow:hidden;
+}
+.bigbox3 .box img{
+   margin-top:0;
+   transition:all 0.3s;
+}
+.bigbox3 .box:hover img{
+   margin-left:-200px;
+}
+
+.bigbox4 .dbox1{
+   background-image:url(ww1.jpg);
+   background-repeat:10-repeat;
+   background-position:0 0;
+}
+
+.bigbox4 .dbox2{
+   background-image:url(ww2.jpg);
+   background-repeat:10-repeat;
+   background-position:0 0;
+}
+.bigbox4 .dbox3{
+   background-image:url(ww3.jpg);
+   background-repeat:10-repeat;
+   background-position:0 0;
+}
+.bigbox4 .dbox4{
+   background-image:url(ww4.jpg);
+   background-repeat:10-repeat;
+   background-position:0 0;
+}
+
+.bigbox4 .box{transition:all 0.3s;}
+
+.bigbox4 .box:hover{
+   background-position:-200px 0;
+}
+
+
+
+.bigbox5 .ebox1{
+   background-image:url(cat1.jpg);
+   background-repeat:10-repeat;
+   background-position:50% 50%;
+}   
+.bigbox5 .ebox2{
+   background-image:url(cat2.jpg);
+   background-repeat:10-repeat;
+   background-position:50% 50%;
+}
+.bigbox5 .ebox3{
+   background-image:url(cat3.jpg);
+   background-repeat:10-repeat;
+   background-position:50% 50%;
+}
+.bigbox5 .ebox4{
+   background-image:url(cat4.jpg);
+   background-repeat:10-repeat;
+   background-position:100% 100%;
+}
+.bigbox5 .box{
+   background-size:100%;
+   transition:all 0.3s;
+}
+.bigbox5 .box:hover{
+   background-size:120%;
+}
+
+.bigbox5 .box{
+   background-size:100%;
+   transition:all 0.3s;
+
+}
+.bigbox5 .box:hover{
+   background-size:120%;
+}
+.bigbox6 .box{overflow:hidden;}
+.bigbox6 .box img{
+   transform:scale(1);
+   transition:all 0.3s;
+}
+.bigbox6 .box:hover img{
+   transform:scale(1.2);
+}
+
+</style>
+
+</head>
+<body>
+   <div class="wrap">
+      <div class="bigbox bigbox1">
+         <h2>고양이 사진1</h2>
+         <div class="box abox1">
+            <img src="cat1.jpg" alt="고양이1">
+         </div> 
+         <div class="box abox2">
+            <img src="cat2.jpg" alt="고양이2">
+         </div> 
+         <div class="box abox3">
+            <img src="cat3.jpg" alt="고양이3">
+         </div> 
+         <div class="box abox4">
+            <img src="cat4.jpg" alt="고양이4">
+         </div> 
+      </div>
+      <div class="bigbox bigbox2">
+         <h2>고양이 사진2</h2>
+         <div class="box bbox1">
+            <img src="c1.jpg" alt="고양이1">
+         </div> 
+         <div class="box bbox2">
+            <img src="c2.jpg" alt="고양이2">
+         </div> 
+         <div class="box bbox3">
+            <img src="c3.jpg" alt="고양이3">
+         </div> 
+         <div class="box bbox4">
+            <img src="c4.jpg" alt="고양이4">
+         </div> 
+         
+      </div>
+      <div class="bigbox bigbox3">
+         <h2>여자 모델사진</h2>
+         <div class="box cbox1">
+            <img src="ww1.jpg" alt="여자1">
+         </div> 
+         <div class="box cbox2">
+            <img src="ww2.jpg" alt="여자2">
+         </div> 
+         <div class="box cbox3">
+            <img src="ww3.jpg" alt="여자3">
+         </div> 
+         <div class="box cbox4">
+            <img src="ww4.jpg" alt="여자4">
+         </div> 
+      </div>   
+      <div class="bigbox bigbox4">
+         <h2>고양이 사진1</h2>
+         <div class="box dbox1">
+            
+         </div> 
+         <div class="box dbox2">
+            
+         </div> 
+         <div class="box dbox3">
+            
+         </div> 
+         <div class="box dbox4">
+            
+         </div> 
+      </div>
+      <div class="bigbox bigbox5">
+         <h2>고양이 사진1</h2>
+         <div class="box ebox1">
+            
+         </div> 
+         <div class="box ebox2">
+            
+         </div> 
+         <div class="box ebox3">
+            
+         </div> 
+         <div class="box ebox4">
+            
+         </div> 
+      </div>
+      <div class="bigbox bigbox6">
+         <h2>고양이 사진스케일</h2>
+         <div class="box fbox1">
+            <img src="cat1.jpg" alt="고양이1">
+         </div> 
+         <div class="box fbox2">
+            <img src="cat2.jpg" alt="고양이2">
+         </div> 
+         <div class="box fbox3">
+            <img src="cat3.jpg" alt="고양이3">
+         </div> 
+         <div class="box fbox4">
+            <img src="cat4.jpg" alt="고양이4">
+         </div> 
+      </div>
+   
+   
+   
+   
+   
+   
+   
+   </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+*{margin: 0;padding: 0;}
+.wrap{
+   width: 900px;
+   margin: 0 auto;
+    /*전체 중앙정렬  */
+}
+header{
+    position: relative;
+    height:300px;
+    background: url(../images/top.jpg);
+}
+/* header h1{} */
+.logo{
+    position: absolute;
+    bottom:50px;
+    right:50px;
+    color:#fff;
+}
+nav{
+  width: 900px;
+  height:70px;
+  background-color: #2a1d0a;  
+}
+nav ul{
+    list-style: none;
+    /* 블릿없애기 */
+}
+nav ul li{
+    float: left;
+    /* background-color: aqua; */
+    margin-left: 25px;
+    margin-top: 15px;
+}
+nav ul li a{
+    display: block;
+    /* a 인라인요소 width,height 를 적용하기위해
+    블록 요소로 변경 */
+    width:150px;
+    height:40px;
+    line-height: 40px;/*줄간격 - 세로중앙정렬*/
+    border: 1px solid #fff;
+    text-align: center;/*가로중앙정렬*/
+    border-radius: 20px;/*모서리둥글게*/
+    text-decoration: none;/*밑줄없애기*/
+    color:white;/*글자색 흰색*/
+    font-weight: bold;
+    /* 글자 진하게 */
+}
+/*a태그에 마우스 올렸을때*/
+nav ul li a:hover{
+    background-color: #fff;/*배경색-흰색*/
+    color:#000;/*글자색 검정*/
+    text-decoration: underline;/*밑줄*/
+}
+.content{
+    /* height:550px; */
+    overflow: hidden;
+}
+
+section{
+    width:650px;
+    height:550px;
+    background-color: #ccc;
+    float: left;
+}
+section h3{
+    padding: 10px 0;
+    /* 위아래 안여백 */
+    text-align: center;
+}
+section article{
+    width:270px;
+    height:200px;
+    border: 1px solid #333;
+    /* 테두리선 1px(선두께) 실선 회색 */
+    float: left; /*옆으로 나열*/
+    padding: 10px;
+    /* 안여백 위 오른쪽 아래 왼쪽 10px */
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+article h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;
+    padding-bottom: 10px; 
+}
+article p{
+    line-height: 170%;/*줄간격*/
+    text-align: justify;
+    /* 양쪽 정렬 */
+}
+
+
+aside{
+    width:250px;
+	height:550px;
+	background-color:#726054;
+	float:left;
+    text-align: center;/*중앙정렬이 상속*/
+    
+}
+aside h3{
+    padding: 10px 0;
+}
+aside img{
+    padding-bottom: 10px;
+    width:220px;
+}
+footer{
+    /* clear:both; - float를 취소 */
+    height:60px;
+    line-height: 60px;/*세로중앙정렬*/
+    background-color: #333;
+    color:#fff;
+    /* margin-top: 100px; */
+    text-align: center;
+}

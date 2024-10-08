@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ul{list-style: none;} /* 블릿없애기  */
+li{line-height: 50px;}/*줄간격(행간)*/
+label {width: 70px;float:left;}
+
+</style>
+
+
+</head>
+<body>
+    <form action="abc.php" method="post">
+        <ul >
+            <li>
+                <label for="r-name">이름</label>
+                <input type="text" name="r-name" id="r-name">
+            </li>
+            <li>
+                <label for="r-phone">휴대폰</label>
+                <input type="text" name="r-phone" id="r-phone">
+            </li>
+            <li>
+                <label for="r-email">이메일</label>
+                <input type="text" name="r-email" id="r-email">
+            </li>
+            <li>
+                <input type="submit" value="예약하기">  
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

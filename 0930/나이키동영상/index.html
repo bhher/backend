@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nike.css">
+    <title>나이키</title>
+</head>
+<body>
+    <!-- 배경에 동영상 삽입하기(자동재생/반복) - loop -->
+    <figure class="vid">
+        <video autoplay muted loop>
+            <source src="media/nike.mp4" type="video/mp4">
+        </video>
+        <!--  muted(음소거) 하지 않으면 자동재생이 안된다.  -->
+    </figure>
+    <h1><img src="images/logo2.png" alt="나이키로고"></h1>
+    <header>
+    <!-- 1차메뉴 -->
+     <!-- ul#gnb>(li>a[href=#]>em)*5 -->
+     <ul id="gnb">
+        <li class="on"><a href="#" ><em>About NIKE</em></a></li>
+        <li><a href="#"><em>Brand Info</em></a>
+        <!-- 2차메뉴 -->
+            <!-- ul>(li>a[href=#]>em{2차메뉴$})*4 -->
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul> 
+        </li>
+        <li><a href="#"><em>Community</em></a>
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul> 
+        </li>
+        <li><a href="#"><em>Prouect Value</em></a>
+            <ul>
+                <li><a href="#"><em>2차메뉴1</em></a></li>
+                <li><a href="#"><em>2차메뉴2</em></a></li>
+                <li><a href="#"><em>2차메뉴3</em></a></li>
+                <li><a href="#"><em>2차메뉴4</em></a></li>
+            </ul> 
+        </li>
+        <li><a href="#"><em>Company History</em></a></li>
+     </ul>
+    </header>
+     <!-- sns생성버튼 -->
+      <ul id="sns">
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+      <!-- 텍스트상자 만들기 -->
+      <section class="txtBox">
+        <p class="txt">Best Qulified<strong>AIR MAX</strong></p>
+        <p class="tit">50<em>/24</em></p>
+      </section>
+      <section id="side">
+            <div class="con">
+                <p><em>Event & Community</em>
+                    <a href="#"><img src="images/pic1.png" alt=""></a></p>
+                <p><em>News & Notice</em>
+                    <a href="#"><img src="images/pic2.png" alt=""></a></p>
+                <p><em>Product Review</em>
+                    <a href="#"><img src="images/pic3.png" alt=""></a></p>            
+            </div>
+            <!-- 왼쪽 더블화살표 아이콘(자동 롤링버튼) -->
+            <div class="btn">
+                <i class="fa fa-angle-double-left"></i>
+                <i class="fa fa-angle-double-left"></i>
+                <i class="fa fa-angle-double-left"></i>
+            </div>
+      </section>
+</body>
+</html>

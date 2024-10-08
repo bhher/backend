@@ -1,0 +1,188 @@
+*{margin: 0;padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color:#333;}
+.cf::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/* overflow:hidden; height:300px;
+것처럼 높이 만들줌 */
+#wrap{
+    width: 100%;
+}
+.franchise{
+    width:100%;
+    padding: 50px 0;
+}
+.inner{
+    width:1440px;
+    margin: 0 auto;
+}
+.inner .title{
+    /*  width:1440px; */
+    width: 100%;
+    text-align: center;
+}
+.title h2{
+    color:#1e1e1e;
+    font-size: 43px;
+}
+
+.card_list{
+   padding: 50px 0;
+}
+
+.card_list ul{
+    width: 100%;
+   
+}
+
+.card_list ul li{
+    float: left;
+    width:341px;
+    height:430px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    margin-right: 25px;
+    text-align: center;
+    padding-top: 40px;
+}
+/* .card_list ul li:last-child */
+.card_list ul li:nth-child(4){
+    margin-right:0;
+}
+.card_list ul li .pic{
+    padding-bottom: 30px;
+}
+.card_list ul li .num{
+
+}
+.card_list ul li .num span{
+    display: block;
+    margin: 20px auto;
+    /* 블럭요소 중앙정렬 */
+    background-color: #003e73;
+    color:#fff;
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    /* 수직중앙정렬 */
+    border-radius: 50%;
+}
+.card_list ul li .txt{
+
+}
+.card_list ul li .txt h3{
+    font-size: 20px;
+    padding: 10px 0;
+    color:#003e73;
+}
+.card_list ul li .txt p{
+    color:#1e1e1e;
+}
+.button_wrap{
+    text-align: center;
+}
+.button_wrap p{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.button_wrap p span{
+    font-weight: bold;
+}
+.button_wrap a {
+    display: block;
+    width: 340px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #003e73;
+    color:#fff;
+    margin: 0 auto;
+}
+.button_wrap a:hover{
+    border: 1px solid #003e73;
+    color: #333;
+    background-color:#fff;
+}
+.footer{
+    background-color: #003e73;
+    color:#fff;
+}
+.footer .inner{
+    width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    box-sizing: border-box;
+    padding: 50px 0;  
+}
+.footer .inner .logo{
+    float: left;
+    width: 220px;;
+}
+.footer .inner .address{
+    float: left;
+    width:906px;
+    box-sizing: border-box;
+    padding: 0 120px;
+}
+.address .privacy{   
+    margin-top: -20px;
+}
+.privacy a{
+    color:red;
+}
+
+.address p{
+    padding-top: 15px ;
+}
+.address p span{
+    position: relative;
+    display: inline-block;
+    margin-right: 7px;
+    margin-bottom: 4px;
+}
+.address p span.bar::before{
+    content: '|';
+    display: inline-block;
+    margin-right: 7px;
+}
+
+
+.footer .family{
+    position: absolute;
+    width:200px;
+    height:40px;
+    right:40px;
+    top:60px;
+    border: 1px solid #fff;
+    background-color: #003e73;
+}
+.family label{
+    position: absolute;
+    width: 100%;
+    padding: 7px 10px 11px;
+    top:0;
+    left:0;
+    color:#fff;
+    box-sizing: border-box;
+}
+.family select{
+    width:100%;
+    height:auto;
+    padding: 11px 10px;
+    line-height: normal;
+    border: 0;
+    opacity: 0;
+    appearance: none;
+    cursor: pointer;
+}
+.footer .family::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height:10px;
+    right:5px;
+    top:15px;
+    background: url(../images/ico.png) no-repeat -300px 0; 
+}

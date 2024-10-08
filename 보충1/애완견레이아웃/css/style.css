@@ -1,0 +1,114 @@
+*{margin: 0;padding: 0;}
+.wrap{
+    width:900px;
+    margin: 0 auto;
+}
+/* 전체 가로사이즈를 900 중앙정렬 */
+.header{
+   background-color: #f46075;
+   height:200px; 
+}
+.header h1{
+    float: left;
+    color:#fff;
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.header img{
+    float:right;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+.nav{
+   height:50px;
+   background-color: #ddd; 
+}
+.nav ul {
+    list-style: none;
+}
+.nav ul li{
+    float: left;
+    /* width:25%; */
+}
+.nav ul li a{
+    display: block;
+    /* 인라인요소를 블럭요소변경(넓이높이를 줄수있다.) */
+    /* background-color: red; */
+    /*width:100%;*/
+    width: 225px;
+    height:50px;
+    line-height: 50px; /*세로중앙정렬*/
+    text-align: center; /*가로중앙정렬*/
+    text-decoration: none;/*밑줄없애기*/
+    font-weight: bold;
+    /*글자진하게*/
+    color:#333; /*글자색은 진한 회색*/
+}
+
+.nav ul li a:hover{
+    background-color: hotpink;
+    color:#fff;
+}
+.contents{
+    width:900px;
+    height:520px;
+
+}
+
+.section{
+    width:650px;
+    height:520px;
+    float:left;
+    background-color: #ccc;
+}
+.section h2{
+    text-align: center;
+    padding: 10px 0;
+}
+.section .box{
+    width:270px;
+    height: 190px;
+    border:1px solid #333;
+    background-color: #fff;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+.box h3{
+    margin-bottom: 10px;
+    /* background-color: aqua; */
+}
+.box p{
+    font-size: 13px;
+    text-align: justify;/*양쪽정렬*/
+}
+
+
+.side{
+    width:250px;
+    height:520px;
+    float: left;
+    background-color: #876547;
+    text-align: center;
+}
+.side h2{
+    margin: 10px 0;
+    color:#fff;
+}
+.side img{
+    margin-bottom: 10px;
+}
+
+
+.footer{
+    height:60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #333;
+    color:#fff;
+}
+
+
+
+

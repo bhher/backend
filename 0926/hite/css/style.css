@@ -1,0 +1,152 @@
+*{margin: 0;padding: 0;}
+.cf::after{
+    clear: both;
+    display: block;
+    content: "";
+}
+ul, li{list-style: none;}
+#wrap{
+    width:100%;
+    height:auto;
+    background-color: #f4f4f4;
+}
+section{
+	width:1070px;
+	height:1020px;
+	margin:0 auto;
+    /* border: 1px solid blue; */
+}
+section h1{
+    padding: 60px 0 30px 0;
+    font-weight: normal;
+}
+#content{
+    width:1070px;
+	height:900px;
+	position:relative;
+	border:1px solid red;
+}
+
+
+#content div{
+    position: absolute;
+    display: none;
+}
+#content div a{
+    display: block;
+    width:100%;
+    height:100%;
+    position: relative;
+}
+#content div a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    background-color: rgba(4,69,244,0.85);
+    transition: all 0.2s;
+}
+
+#content div a p{
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    width:100%;
+    top:80px;
+    color:#fff;
+    font-size: 13px;
+    text-align: center;
+    padding-bottom: 50px;
+    background: url(../img/more.png) no-repeat 50% 100%;
+    /* background-color: rgba(255,0,0,0.5); */
+    transition:all  0.5s;
+}
+/* 글자 숨기기 */
+#content div a:hover p{
+    opacity: 1;
+    /* 글자보이기 */
+}
+#content div a:hover::before{
+    width: 100%;
+    /* 파란창 나타나게하기 */
+}
+
+
+#content .img1{
+    display: block;
+    top:0;
+    left:0;
+    width:260px;
+    height:260px;
+}
+#content .img2{
+    display: block;
+    top:0;
+    left:270px;
+    width:260px;
+    height:530px;
+}
+#content div.img2 a p{
+    top:40%;
+}
+
+
+#content .img3{
+    display: block;
+    top:0;
+    left:540px;
+	width:260px;
+	height:260px;
+}
+#content .img4{
+	display:block;
+	top:0;left:810px;
+	width:260px;
+	height:260px;
+}
+#content .img5{
+	display:block;
+	top:270px;left:0px;
+	width:260px;
+	height:260px;
+}
+#content .img6{
+	display:block;
+	top:270px;left:540px;
+	width:530px;
+	height:260px;
+}
+#content .img7{
+    top:540px;
+    left:0px;
+    display:block;
+    width:260px;
+    height:260px;}
+#content .img8{
+	display:block;
+	top:540px;left:270px;
+	width:530px;
+	height:260px;
+}
+#content .img9{
+	display:block;
+	top:540px;
+	left:810px;
+    width:260px;
+    height:260px;
+}
+
+#content div.img6 a::before, 
+#content div.img8 a::before{
+ 
+    height:0%;
+    width:100%;
+  
+}
+#content div.img6 a:hover:before,
+#content div.img8 a:hover:before{
+	height:100%;
+}

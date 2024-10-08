@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .box1{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #333;
+    }
+@media screen and (max-width:600px) {
+    /* 핸드폰용 */
+    .box1{background-color: blue;}
+}
+@media screen and (min-width:601px) and (max-width:1023px) {
+    /* 스마트패드 */
+    .box1{background-color: green;}
+}
+
+@media screen and (min-width:1024px) {
+    /* pc용 */
+    .box1{background-color: red;}
+}
+</style>
+</head>
+<body>
+    <div class="box box1">
+
+    </div>
+</body>
+</html>

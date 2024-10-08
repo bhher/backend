@@ -1,0 +1,90 @@
+*{margin:0;padding:0;}
+ul{list-style:none;}
+a{text-decoration:none; color:#000;}
+.cf:after{content:""; display:block; clear:both;}
+
+header{
+    position: absolute;
+    width: 100%;
+}
+.logo{
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+.right1{
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+nav{
+    position: absolute;
+    z-index: 102;
+    height:70px;
+    width:100%;
+    background: url(../images/h_bar.png) no-repeat center bottom;
+}
+nav>ul{
+    width:950px;
+    height:70px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 103;
+    overflow: hidden;
+    /* background-color: yellow; */
+    transition:all 0.35s;
+}
+nav > ul > li{
+    float:left;
+}
+nav > ul > li > a{
+    display: block;
+    height: 70px;
+    padding: 0 40px;
+    line-height: 70px;
+    font-weight: bold;
+    color:#fff;
+    font-size: 19px;
+    position: relative;
+}
+nav > ul > li > a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:4px;
+    background-color: #fff;
+    bottom:0;
+    left:0;
+    /* transform-origin: right center; */
+    /* 기준위치를 변경가능 */
+    transform: scale(0,1);
+    transition: all 0.3s;
+}
+nav > ul> li > a:hover::before{
+    transform: scale(1,1);
+}
+
+nav ul ul a{
+    display: block;
+    padding: 0 35px 0 40px;
+    line-height: 38px;
+    color:#fff;
+}
+
+nav > ul:hover{
+    height:300px;
+}
+.sub_shadow{
+    position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+    height: 0px;
+    /* background-color: #1f2572; */
+    transition:all 0.35s;
+    background:#1f2572 url(../images/h_bar.png) no-repeat center 70px;
+}
+nav > ul:hover + .sub_shadow{
+    height: 300px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+.abigbox{
+    width:1000px;
+    border: 5px solid tan;
+    margin: 30px auto;
+   height:250px;
+}
+.abigbox h2{
+    padding: 15px 0; 
+    text-align: center;
+}
+.abox{
+    width: 200px;
+    height:150px;
+    border: 1px solid #333;
+    float:left;
+    margin-left: 40px;
+    position: relative;
+}
+.abox img{display: block;}
+.abox1::after{
+    content:'';
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition:all 0.4s;
+}
+.abox1:hover::after{
+    /* background-color: rgba(0,0,0,0.5); */
+    opacity: 1;
+}
+
+
+.abox2::after{
+    content:'';
+    width:0%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    
+    transition:all 0.4s;
+}
+.abox2:hover::after{
+    /* background-color: rgba(0,0,0,0.5); */
+    width:100%;
+}
+
+
+.abox3::after{
+    content:'';
+    width:100%;
+    height:0%;
+    position: absolute;
+    /* top:0; */
+    bottom:0;
+    left:0;
+    background-color: rgba(0,0,255,0.5);
+    
+    transition:all 0.4s;
+}
+.abox3:hover::after{
+    /* background-color: rgba(0,0,0,0.5); */
+    height:100%;
+}
+.abox4{overflow: hidden;}
+.abox4::after{
+    content:'';
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;    
+    left:100%;
+    background-color: rgba(0,0,255,0.5);
+    
+    transition:all 0.4s;
+}
+.abox4:hover::after{
+    /* background-color: rgba(0,0,0,0.5); */
+   left: 0;
+}
+</style>
+</head>
+<body>
+    <div class="abigbox">
+        <h2>입양합시다.</h2>
+        <div class="abox abox1">
+            <img src="img/d1.jpg" alt="강쥐1">
+        </div>
+        <div class="abox abox2">
+            <img src="img/d2.jpg" alt="강쥐2">
+            
+        </div>
+        <div class="abox abox3">
+            <img src="img/d3.jpg" alt="강쥐3">
+        </div>
+        <div class="abox abox4">
+            <img src="img/d4.jpg" alt="강쥐2">
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>첨해본다.</title>
+    </head>
+    <body>
+        오늘열심히 해보겠다.
+    </body>
+</html>
+
+브라우저에 작성한 html 띄우기
+
+왼쪽 5번째 아이콘 확장 클릭
+open 이라고 검색하면 - open in browser -설치
+
+alt + b 로 브라우저로 작성한 html 보기
+또는 오른쪽 버튼 open in default browser
+확장프로그램
+auto rename tag
+auto close tag
+
+
+h1 헤딩태그
+p태그  
+span 태그
+strong 진하게
+em 글자기울이기
+ins 밑줄
+del 취소선
+ul 태그
+li 태그
+table 만들기
+합치기  rowspan colspan
+ class 에 style주기
+
+
+
+
+
+
+
+
+
+
+
+

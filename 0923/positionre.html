@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+<style>
+.box{
+    width: 200px;
+    height:200px;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    background-color:blueviolet;
+}
+.box3{
+    position: relative;
+    background-color: yellowgreen;
+    top:50px;
+    left:50px;
+    z-index: 1;/*순서올리기*/
+
+}
+.box4{
+    background-color: coral;
+    position: relative;
+}
+/*
+relative 
+1. 자리값이 있다.(원래 자리를 안뺏김)
+2. top, left 이동 가능
+3. absolute에 부모 역할을 한다.
+4. 기준위치 원래 자기 자리에서 부터 시작
+5. 겹칠수 있다.
+
+*/
+
+
+</style>
+
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+</body>
+</html>

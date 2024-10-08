@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// ==와 ===의 차이점은 무엇인가? 다음 코드의 결과는 무엇일까?
+var a = '5';
+var b = 5;
+
+console.log(a==b);//true
+console.log(a===b); //false 
+
+//다음 코드의 결과 
+var x = 10;
+var y = 5;
+x += y; // x = x + y -> 15
+x *= 2; // x = x * 2  -> 30
+
+console.log(x);
+//논리 연산자 
+var i = true;
+var j = false;
+
+console.log(i && j); // 둘다 true 결과가 true가 마옴
+console.log(i || j); // 둘중에 하나가 true 면 결과 true
+console.log(!i);  //i not을 의미 true면 false로 바뀜
+
+//삼항연산
+//let age = 20;
+let age = prompt("나이를 입력하세요?","0");
+let message =  age >= 18 ? "성인입니다.": "미성년자입니다.";
+
+//console.log(message);
+document.write(message);
+
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

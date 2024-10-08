@@ -1,0 +1,35 @@
+*{margin: 0;padding:0;}
+#container{
+    width:960px;
+    margin: 10px auto 0;
+    /* 바깥여백 위 10 좌우 auto 아래 0 */
+    border:1px solid #333;
+    padding: 20px;
+}
+#header{
+    padding: 30px 20px;
+    /* 안여백 위아래 30 좌우 20 */
+    border: 1px solid #333;
+    margin-bottom: 20px;
+}
+
+#sidebar{
+    width:220px; /*너비*/
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px; 
+    float: right;
+}
+#contents{
+    width:620px;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px; 
+    float: left;
+}
+#footer{
+    clear:both;/*양쪽 플로팅 해제 - 줄바꿈*/
+    padding: 30px 20px;
+    border: 1px solid #333;
+    margin-bottom: 20px; 
+}
