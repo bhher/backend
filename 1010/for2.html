@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    .red{color: #f00;}
+	.green{color: #00f;}
+	.aqua{color: #0ff;}
+ </style>   
+<script>
+    for(var i = 1; i <= 100; i++){
+		if(i % 5 == 0 && i % 7 != 0) { //5의배수이면서 7의배수가 아닌
+			document.write("<p class='red'>"+i+"</p>");
+		} else if(i % 7 == 0 && i % 5 != 0) {//7의배수이면서 5에배수가아닌
+			document.write("<p class='green'>"+i+"</p>");
+		} else if(i % 7 == 0 && i % 5 == 0) {//7의 배수이변서 7의배수
+			document.write("<p class='aqua'>"+i+"</p>");
+		}
+	}
+
+      
+</script>    
+</head>
+<body>
+    
+</body>
+</html>
