@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+var imgNum = Math.floor(Math.random()*7)+1;
+//alert(imgNum);
+/*
+1. Math.random() 0~1 사이 나오면 곱하기 7  0.00000007~ 6.999999
+2. Math.floor 소수점을 버리므로 0~6사이
+3. +1   1~7 까지무작위 숫자가 나옴
+*/
+
+//document.write("<img src='images/img"+imgNum+".jpg'>");
+document.write(`<img src="images/img${imgNum}.jpg">`);
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

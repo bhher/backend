@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigbox {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>사진</h2>
+    <div class="bigbox">
+       
+        <div class="box box1">
+            <img src="images/img1over.jpg" alt="">
+        </div>
+        <div class="box box2">
+            <img src="images/img2over.jpg" alt="">
+        </div>
+        <div class="box box3">
+            <img src="images/img3over.jpg" alt="">
+        </div>
+        <div class="box box4">
+            <img src="images/img4over.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+// 이미지 클릭 시 imgX.jpg를 imgX_1.jpg로 바꾸는 함수
+function changeImage(event) {
+    const image = event.target; // 클릭된 이미지 요소
+
+    const currentSrc = image.src;
+    //images/img1over.jpg
+
+    // 이미지의 src가 img1over.jpg일 경우 img1out.jpg.jpg로 변경
+    if (currentSrc.includes('over.jpg')) {
+        image.src = currentSrc.replace('over.jpg', 'out.jpg');
+    }else{
+        image.src = currentSrc.replace('out.jpg', 'over.jpg');
+    }
+}
+
+// 모든 <img> 요소에 클릭 이벤트 리스너 추가
+const images = document.querySelectorAll('img');
+//img 4개 변수 images 변수에 넣고
+images.forEach((image) => {
+    image.addEventListener('click', changeImage);
+});
+//4개중 하나를 클릭하는데 그하나는 image
+
+
+
+</script>
