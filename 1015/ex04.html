@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+      var a = true;
+      var b= false;
+      var c = 10 > 5;
+      var d = Boolean(null);
+      var s; //undefined
+      var t = null;  //어떤값을 비우고자 할때
+      //Boolean()  데이터가 입력되면 true, false
+      //0, null, undifined, 빈문자열("") 제외한 모든데이터 true
+      var num = 100;  
+      var str  = "자바스크립트";
+
+      var num = 10; //변수의 첫글자로는 $, _(언더바),영문자
+      //예약어 올수 없음
+      //var document = 10;
+      document.write(a,"<br>");
+      document.write(b,"<br>");
+      document.write(c,"<br>");
+      document.write(d,"<br>");
+      document.write(s,"<br>");
+
+      document.write(typeof num,"<br>");
+      document.write(typeof str,"<br>");
+      var t1 = "학교종이";
+     var t2 = "땡땡땡";
+     var result = t1 + t2;
+     document.write(result,"<br>");
+
+
+     var str1 = "<table border='1'>";
+     str1+="<tr>";
+     str1+="<td>1</td><td>2</td><td>3</td>";
+     str1+="</tr>";
+     str1+="</table>";
+     document.write(str1);   
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

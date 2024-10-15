@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//사용자의 이름을 입력받아 인사하는 프로그램
+//var userName = prompt("이름을 입력하세요 :", "홍길동");
+//document.write("안녕하세요, "+ userName+ "님!");
+//document.write(`안녕하세요, ${userName}님!`);
+
+//배열에 숫자 저장하기
+var numbers =[1,2,3,4,5];
+//document.write(numbers);
+document.write(numbers[0],"<br>");
+document.write(numbers[1],"<br>");
+document.write(numbers[2],"<br>");
+document.write(numbers[3],"<br>");
+document.write(numbers[4],"<br>");
+
+for(var i=0; i < 5; i++ ){
+    document.write(numbers[i],"<br>");
+}
+
+for(var i=0; i < numbers.length; i++ ){
+    document.write(numbers[i],"<br>");
+}
+//객체 생성하기
+let person ={
+    name : "홍길동",
+    age:30
+}
+document.write(person.name , "<br>");
+document.write(person.age,"<br>" );
+
+let personJson = JSON.stringify(person);
+// json 형식의 파일로 객체리터럴을 변환
+console.log(personJson);
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
