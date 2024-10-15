@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    var days = ["일", "월", "화", "수", "목", "금", "토"];
+    var today = new Date();
+    //var day = today.getDay(); //0 일요일 1 월요일 2 화요일
+    // alert(day);
+    var yoil = days[today.getDay()];
+    document.write(yoil+"요일 <br/>");
+
+    //전체 은행 잔고
+    var money = [1000,2000,500,10000,7500];
+    var total = 0;
+    for(var i=0; i < money.length; i++){
+        //document.write(money[i],"<br>");
+       total = total + money[i];
+    }
+    document.write(total);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

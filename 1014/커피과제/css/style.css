@@ -1,0 +1,351 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+
+
+@media screen and (max-width:600px) {
+    
+
+    .wrap{
+        width:100%;     
+    }
+    header{
+        position: relative;
+        height:200px;   
+        background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+    } 
+    header h1{
+        position: absolute;
+        bottom:20px;
+        right:15px;
+        color:#fff;
+    }
+    nav{
+        width:100%;
+        height:140px;
+        background-color: #2a1d0a;
+    }
+    nav ul {
+        list-style: none;/*블릿없애기*/
+    }
+    nav ul li{
+        float: left;
+        width:33.3333%;
+        margin-top: 18px;
+    }
+    nav ul li a{
+       display: block;
+       /*a 인라인요소 width, height 를 적용하기위해 블록요소로 변경*/
+       margin:0 auto;
+       /* li안에 중앙정렬 */
+       width:130px;
+       height:40px;
+       line-height: 40px;  /*세로중앙정렬*/
+       color:#fff;
+       border: 1px solid #fff;
+       text-align: center; /*가로중앙정렬*/
+       border-radius: 20px;
+       text-decoration: none;/*글자의 밑줄 없애기*/
+       font-weight: bold;
+    }
+    /* a 마우스를 올렸을때 */
+    nav ul li a:hover{
+        background-color: #fff;
+        color:#000;
+        text-decoration: underline;
+    }
+    .content{
+        height:auto;
+    }
+    section{
+        width:100%;
+        height:auto;
+        background-color: #ccc;
+        padding-bottom: 10px;
+    }
+    section h3{
+        padding: 10px 0;
+        text-align: center;
+    }
+    section article{
+        width:80%;
+        height:auto;
+        border: 1px solid #333;
+        padding: 10px;
+        margin: 20px auto;
+    }     
+    article:hover{
+        background-color: rgba(223, 255, 211, 0.5);
+    }
+    article h4{
+        background: url(../images/kong.png) no-repeat 0 0;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    article p{
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    aside{
+        width:100%;
+        height:auto;
+        background-color:#726054;
+        text-align:center;
+    }
+    aside h3{
+        padding: 10px 0;
+    }
+    aside img{
+        width:70%;
+        padding-bottom: 15px;
+    }
+    footer{
+        /* margin-top: 200px; */
+        /* clear: both; */
+        height:60px;
+        line-height: 60px;
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+ }
+
+
+
+
+
+
+ @media screen and (min-width:601px) and (max-width:1023px) {
+    
+
+    .wrap{
+        width:580px;
+        margin: 0 auto;
+        /* background-color: #999; */
+    }
+    header{
+        position: relative;
+        height:200px;
+        background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+    } 
+    header h1{
+        position: absolute;
+        bottom:30px;
+        right:30px;
+        color:#fff;
+    }
+    nav{
+        width:100%;
+        height:70px;
+        background-color: #2a1d0a;
+    }
+    nav ul {
+        list-style: none;/*블릿없애기*/
+    }
+    nav ul li{
+        float: left;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    nav ul li a{
+       display: block;
+       /*a 인라인요소 width, height 를 적용하기위해 블록요소로 변경*/
+       width:100px;
+       height:30px;
+       line-height: 30px;  /*세로중앙정렬*/
+       color:#fff;
+       border: 1px solid #fff;
+       text-align: center; /*가로중앙정렬*/
+       border-radius: 20px;
+       text-decoration: none;/*글자의 밑줄 없애기*/
+       font-weight: bold;
+    }
+    /* a 마우스를 올렸을때 */
+    nav ul li a:hover{
+        background-color: #fff;
+        color:#000;
+        text-decoration: underline;
+    }
+    .content{
+        height:auto;
+    }
+    section{
+        width:100%;
+        height:auto;
+        background-color: #ccc;
+        overflow: hidden;
+        padding-bottom: 10px;
+    }
+    section h3{
+        padding: 10px 0;
+        text-align: center;
+    }
+    section article{
+        width:230px; height:220px;
+        border: 1px solid #333;
+        float: left;
+        padding: 10px;
+        margin: 10px 0 20px 20px;
+        /* 위 오른쪽 아래 왼쪽 */
+    }
+    article:hover{
+        background-color: rgba(223, 255, 211, 0.5);
+    }
+    article h4{
+        background: url(../images/kong.png) no-repeat 0 0;
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    article p{
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    aside{
+        width:100%;
+        height:auto;
+        background-color:#726054;
+        text-align:center;
+    }
+    aside h3{
+        padding: 10px 0;
+    }
+    aside img{
+        width:30%;
+        padding-bottom: 15px;
+    }
+    /* img - inline-block  aside :text-align: center; 중앙정렬 */
+    footer{
+        /* margin-top: 200px; */
+        /* clear: both; */
+        height:60px;
+        line-height: 60px;
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1024px) {
+    
+
+.wrap{
+    width:900px;
+    margin: 0 auto;
+    /* background-color: #999; */
+}
+header{
+    position: relative;
+    height:300px;
+    /* border: 1px solid #333; */
+    /* background-image: url('../images/top.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0; left top 동일
+    background-size: cover; */
+    /*화면꽉차게*/
+    background:url('../images/top.jpg') no-repeat 0 0 / cover ;
+} 
+header h1{
+    position: absolute;
+    bottom:50px;
+    right:50px;
+    color:#fff;
+}
+nav{
+    width:900px;
+    height:70px;
+    background-color: #2a1d0a;
+}
+nav ul {
+    list-style: none;/*블릿없애기*/
+}
+nav ul li{
+    float: left;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+nav ul li a{
+   display: block;
+   /*a 인라인요소 width, height 를 적용하기위해 블록요소로 변경*/
+   width:150px;
+   height:40px;
+   line-height: 40px;  /*세로중앙정렬*/
+   color:#fff;
+   border: 1px solid #fff;
+   text-align: center; /*가로중앙정렬*/
+   border-radius: 20px;
+   text-decoration: none;/*글자의 밑줄 없애기*/
+   font-weight: bold;
+}
+/* a 마우스를 올렸을때 */
+nav ul li a:hover{
+    background-color: #fff;
+    color:#000;
+    text-decoration: underline;
+}
+.content{
+    height:550px;
+}
+section{
+    width:650px;
+    height:550px;
+    background-color: #ccc;
+    float:left;
+}
+section h3{
+    padding: 10px 0;
+    text-align: center;
+}
+section article{
+    width:270px; height:200px;
+    border: 1px solid #333;
+    float: left;
+    padding: 10px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+article:hover{
+    background-color: rgba(223, 255, 211, 0.5);
+}
+article h4{
+    background: url(../images/kong.png) no-repeat 0 0;
+    padding-left: 30px;
+    padding-bottom: 10px;
+}
+article p{
+    line-height: 1.7em;
+    text-align: justify;
+}
+aside{
+	width:250px;
+	height:550px;
+	background-color:#726054;
+	float:left;
+	text-align:center;
+}
+aside h3{
+    padding: 10px 0;
+}
+aside img{
+    width:220px;
+    padding-bottom: 15px;
+}
+footer{
+    /* margin-top: 200px; */
+    /* clear: both; */
+    height:60px;
+    line-height: 60px;
+    background-color: #333;
+    color:#fff;
+    text-align: center;
+}
+}

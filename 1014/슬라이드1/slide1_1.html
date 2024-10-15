@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+header{
+    width:100%;
+    max-width: 1920px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+.slide-container{
+    width:100%;
+    max-width: 1920px;
+    height:480px;
+    position: relative;
+}
+.slider{
+    display: flex; 
+    transition : transform 0.5s;
+    /* transform: translateX(-100%);  */
+}
+button{
+    cursor: pointer;
+    /* 가짜링크 - 손가락 모양이 나온다.*/
+    padding: 10px;
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">Provious</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+
+       const slider = document.querySelector('.slider'); 
+       //첫번째 일치하는 요소 .slider 한개밖에 없으므로 한개만 선택
+       const slides = document.querySelectorAll('.slide'); 
+       //모든 일차하는 .slide  세개다 선택됩니다.     
+       var currentIndex = 0;
+
+       function showSlide(index){
+        if(index < 0){
+            currentIndex = slides.length - 1;
+            //index 번호가 0보다 작으면 
+            //currentIndex 에 2를 넣어 맨 마지막 사진으로 슬라이드됨
+        }else if(index >= slides.length){
+            currentIndex = 0;
+            //사진이 맨마지막일때 next를 클릭하면 index =3 이므로
+            //currentIndex 에 0을 넣어 첫번째 사진으로 슬라이드
+        }else{
+            currentIndex = index;
+        }
+          // alert(currentIndex);
+        var transformValue = -currentIndex * 100 + '%';
+        //alert(transformValue); -100$, -200%
+         slider.style.transform = "translateX("+transformValue+")";
+       }
+
+       function nextSlide(){
+            showSlide(currentIndex + 1);
+       }
+       function prevSlide(){
+            showSlide(currentIndex - 1);
+       }
+
+
+    </script>
+</body>
+</html>

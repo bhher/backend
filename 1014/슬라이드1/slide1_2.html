@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+header{
+    width:100%;
+    max-width: 1920px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+.slide-container{
+    width:100%;
+    max-width: 1920px;
+    height:480px;
+    position: relative;
+}
+.slider{
+    display: flex; 
+    transition : transform 0.5s;
+    /* transform: translateX(-100%);  */
+}
+button{
+    cursor: pointer;
+    /* 가짜링크 - 손가락 모양이 나온다.*/
+    padding: 10px;
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <div class="slide-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="images/slide1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="">
+            </div>
+        </div>
+        <button class="prev" onclick="prevSlide()">Provious</button>
+        <button class="next" onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+
+    var slider = document.querySelector('.slider'); 
+    var slides = document.querySelectorAll('.slide');      
+    var currentIndex = 0;
+    function prevSlide() {
+    currentIndex--; // 인덱스를 하나 감소
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1; // 인덱스가 0보다 작으면 마지막 슬라이드로 이동
+    }  
+    var transformValue = -currentIndex * 100 + '%';
+    slider.style.transform = "translateX(" + transformValue + ")";
+}
+
+function nextSlide() {
+    currentIndex++; // 인덱스를 하나 증가
+    if (currentIndex >= slides.length) {
+        currentIndex = 0; // 마지막 슬라이드 이후에는 첫 번째 슬라이드로 이동
+    }
+
+    var transformValue = -currentIndex * 100 + '%';
+    slider.style.transform = "translateX(" + transformValue + ")";
+}
+
+     
+
+    </script>
+</body>
+</html>
