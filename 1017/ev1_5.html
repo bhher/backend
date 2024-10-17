@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="btn" id="btn1">Button1</div>
+    <div class="btn" id="btn2">Button2</div>
+    <div class="btn" id="btn3">Button3</div>
+<script>
+// 버튼3개를 모두 선택 - querySelectorAll
+  let btns = document.querySelectorAll(".btn");
+    
+   //각 버튼에 클릭 이벤트 리스너 추가
+   btns.forEach(function(btn){
+      btn.addEventListener('mouseover',function(){
+            btn.style.backgroundColor = "#333"; //배경색 변경
+            btn.style.color = "#fff"; // 글자색 변경
+       });
+       btn.addEventListener('mouseout',function(){
+            btn.style.backgroundColor = "#f1f1f1"; //배경색 변경
+            btn.style.color = "#333"; // 글자색 변경
+       });
+    });
+
+</script>
+
+</body>
+</html>

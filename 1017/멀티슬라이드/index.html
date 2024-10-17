@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+.slide_wrapper{
+    position: relative;
+    width: 990px;
+    margin: 0 auto;
+    height: 300px;
+    overflow: hidden;
+    top: 50px; 
+}
+
+.slide_wrapper .slides{
+    position: absolute;
+    left: 0px;
+    top: 0;
+    transition: left 0.5s ease-out;
+    /* width:2940px; */
+}
+
+.slide_wrapper .slides li{
+    float: left;
+    margin-right: 30px;
+}
+.slide_wrapper .slides li:last-child{margin-right: 0;}
+
+.controls{
+    text-align: center;
+    margin-top: 100px;
+}
+.controls span{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div class="slide_wrapper">
+        <ul class="slides">
+            <li><img src="images/1.jpg" alt=""></li>
+            <li><img src="images/2.jpg" alt=""></li>
+            <li><img src="images/3.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/5.jpg" alt=""></li>
+            <li><img src="images/6.jpg" alt=""></li>
+            <li><img src="images/7.jpg" alt=""></li>
+            <li><img src="images/8.jpg" alt=""></li>
+            <li><img src="images/9.jpg" alt=""></li>
+        </ul>
+    </div>
+    <p class="controls">
+        <span class="prev">prev</span>
+        <span class="next">next</span>
+    </p>
+
+<script>
+   const slides = document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slides li');
+    var currentIdx = 0;
+    const slideCount = slide.length;
+    const slideWidth = 300;
+    const slideMargin = 30;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const sl = slides.style.width = (slideWidth+slideMargin)*slideCount-slideMargin+"px";
+   // (300+30)*9 - 30 = 2940 - 전체 슬라이드 넓이를 구함
+   // alert(sl);
+
+    function moveSlide(num){
+        slides.style.left = -(num*330) + "px";
+        currentIdx = num;
+    }
+
+
+    nextBtn.addEventListener('click',function(){
+        if (currentIdx < slideCount - 3) {
+            moveSlide(currentIdx + 1);
+        } else {
+            // 마지막 슬라이드에 도달하면 처음으로 이동
+            moveSlide(0);
+        }
+    });
+
+    prevBtn.addEventListener('click', function(){
+        if (currentIdx > 0) {
+            moveSlide(currentIdx - 1);
+        } else {
+            // 첫 슬라이드에서 클릭하면 마지막 슬라이드로 이동
+            moveSlide(slideCount - 3);
+        }
+    });
+</script>
+</body>
+</html>

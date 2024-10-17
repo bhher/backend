@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+function constExample(){
+    //var y=5;
+    // y = 10; 재할당가능
+    //var y = 20; 재선언 가능
+
+    //let y = 5;
+    // y = 10; 재할당가능
+    // let y = 20; 재선언 불가능
+    const y = 10;
+    // y = 20; 재할당 불가능
+    //const y = 20;재선언 불가능
+
+    const obj= {name:"민희"};
+    obj.name = "예슬";//객체의 속성은 변경가능
+    console.log(obj); 
+
+    const arr = [1, 2, 3];
+    arr.push(4); // 배열의 요소는 변경 가능 - 숫자4를 맨뒤로 밀어넣어라
+    console.log(arr); // 출력: [1, 2, 3, 4]
+
+    document.write(y,"<br>");
+
+}
+constExample();
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>
