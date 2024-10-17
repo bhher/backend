@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassList Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn.active {
+            background-color: #333;
+            color: white;
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h2>Click a Button to Activate</h2>
+
+    <div class="btn-container">
+        <div class="btn" id="btn1">Button 1</div>
+        <div class="btn" id="btn2">Button 2</div>
+        <div class="btn" id="btn3">Button 3</div>
+    </div>
+
+    <script>
+        // 버튼들을 모두 선택
+        var buttons = document.querySelectorAll('.btn');
+
+        // 각 버튼에 클릭 이벤트 리스너 추가
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                // 모든 버튼에서 'active' 클래스 제거
+                buttons.forEach(function(btn) {
+                    btn.classList.remove('active');
+                });
+
+                // 클릭한 버튼에 'active' 클래스 추가
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

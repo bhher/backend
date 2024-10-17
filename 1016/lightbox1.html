@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lightbox1.css">
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+            <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+            <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+            <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+            <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+            <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+    var pics = document.querySelectorAll(".pic");
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImage = document.getElementById("lightboxImage");
+
+    for(i=0; i < pics.length; i++){
+        pics[i].addEventListener("click",showLightbox);
+    }  
+    //pics 라는 변수 여러 이미지있는 클래스요소가 저장되 있고 반복문을 통해 요소에
+    //이벤트 리스터를 추가한다.
+
+    //i=0부터 pics.lenght까지 반복하면서 , 배열처럼 클래스 요소에 (pics[i])에 접근
+    // addEventListener("click",showLightbox);를 통해 각요소에 클릭이벤트를 추가 
+    //클릭시 showLightbox 라는 함수가 실행
+
+    function showLightbox(){
+        var bigLocation = this.getAttribute("data-src");
+        lightboxImage.setAttribute("src", bigLocation);
+        // 라이트 박스를 보이게 합니다.
+        lightbox.style.visibility = "visible";
+        lightbox.style.opacity = 1;
+    } 
+
+    // lightbox.onclick = function(){
+    //     lightbox.style.display='none';
+    // };
+    lightbox.addEventListener("click",function(){
+        lightbox.style.visibility = "hidden";
+        lightbox.style.opacity = 0;
+    });
+
+
+    </script>
+
+
+</body>
+</html>

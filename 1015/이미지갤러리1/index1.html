@@ -12,13 +12,13 @@ img{border:0px;}
 
 #wrap{width:640px;margin:100px auto 0 auto;}
 #nav li{float:left;}
-#nav li a{
+#nav li {
 	display:block;border:2px solid #bbb;
 	margin:0 6px 10px 0;border-radius:5px;
 }
-#nav li a img{width:70px;}
+#nav li  img{width:70px;}
 #window{clear:both;}
-#nav li a.active{border:2px solid #fff;}
+
 
 
 </style>
@@ -26,20 +26,30 @@ img{border:0px;}
 <body>
 	<div id="wrap">
 		<ul id="nav">
-			<li><a href="img/lop0.jpg" class="active"><img src="img/thumb0.jpg"/></a></li>
-			<li><a href="img/lop1.jpg"><img src="img/thumb1.jpg"/></a></li>
-			<li><a href="img/lop2.jpg"><img src="img/thumb2.jpg"/></a></li>
-			<li><a href="img/lop3.jpg"><img src="img/thumb3.jpg"/></a></li>
-			<li><a href="img/lop4.jpg"><img src="img/thumb4.jpg"/></a></li>
-			<li><a href="img/lop5.jpg"><img src="img/thumb5.jpg"/></a></li>
-			<li><a href="img/lop6.jpg"><img src="img/thumb6.jpg"/></a></li>
-			<li><a href="img/lop7.jpg"><img src="img/thumb7.jpg"/></a></li>
+			<li><img src="img/thumb0.jpg" data-src="img/lop0.jpg" class="photo"/></li>
+			<li><img src="img/thumb1.jpg" data-src="img/lop1.jpg" class="photo"/></li>
+			<li><img src="img/thumb2.jpg" data-src="img/lop2.jpg" class="photo"/></li>
+			<li><img src="img/thumb3.jpg" data-src="img/lop3.jpg" class="photo"/></li>
+			<li><img src="img/thumb4.jpg" data-src="img/lop4.jpg" class="photo"/></li>
+			<li><img src="img/thumb5.jpg" data-src="img/lop5.jpg" class="photo"/></li>
+			<li><img src="img/thumb6.jpg" data-src="img/lop6.jpg" class="photo"/></li>
+			<li><img src="img/thumb7.jpg" data-src="img/lop7.jpg" class="photo"/></li>
 		</ul>
-		<div id="window"><img src="img/lop0.jpg"/></div>
+		<div id="window"><img src="img/lop0.jpg" id="win"/></div>
 	</div>
 	
 	<script>
+    var photos = document.querySelectorAll(".photo");
+    var win = document.getElementById("win");
+   
 
+    photos.forEach(function(photo) {
+        photo.addEventListener("click", function() {
+           var bigLocation = this.getAttribute("data-src");
+            win.setAttribute("src", bigLocation);
+           
+        });
+    });
 
 
    </script>

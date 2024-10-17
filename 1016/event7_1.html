@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#container{
+    width:400px;
+    margin: 50px auto;
+    text-align: center;
+}
+ul{list-style: none;}
+.rect {
+    width:100px;
+    height:100px;			
+    border:1px solid #222;
+    margin:30px auto;
+    transition: 1s;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+        <p>도형위에 마우스 포인터를 올려 놓으세요</p>
+        <ul>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+            <li class="rect"></li>
+        </ul>
+    </div>
+    <script>
+      var rects = document.querySelectorAll('.rect');
+
+// 각 .rect 요소에 이벤트 리스너 추가 (for문 사용)
+for (var i = 0; i < rects.length; i++) {
+    (function(rect) {
+        rect.addEventListener('mouseover', function() {
+            rect.style.backgroundColor = 'green';
+            rect.style.borderRadius = '50%';
+        });
+
+        rect.addEventListener('mouseout', function() {
+            rect.style.backgroundColor = '';
+            rect.style.borderRadius = '';
+        });
+    })(rects[i]); // 즉시 실행 함수로 현재 요소를 전달
+}
+
+    //rect는 li하나 하나 요소인 .rect를 의미
+
+    </script>    
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+//function 함수이름(매개변수1, 매개변수2){
+//  동작
+//}
+//함수를 쓰는 이유
+// 코드 재사용: 동일한 작업을 반복하지 않고 함수를 호출하여 사용할 수 있습니다.
+// 코드 가독성 향상: 복잡한 로직을 함수로 분리하여 코드를 더 쉽게 이해할 수 있습니다.
+// 유지보수 용이: 함수 단위로 수정이 가능하여 프로그램 전체를 수정할 필요가 없습니다.
+// 추상화: 복잡한 내부 구현을 숨기고 간단한 인터페이스만 제공할 수 있습니다.
+
+//1. 기본함수 선언
+function greeting(){
+    document.write("안녕하세요","<br>");
+}
+greeting();
+
+function greet(name){
+    return "hello, " + name + "님 !"; 
+}
+document.write(greet("서민희"),"<br>");
+
+function greet1(name){
+    return "hello, " + name + "님 !"; 
+}
+var result = greet1("마예슬");
+document.write(result,"<br>");
+
+
+//2. 함수 표현식
+
+// 함수 표현식이 함수 호출보다 위에 있어야함
+//익명함수 
+var square = function(x){
+    return x*x ;
+}
+
+document.write(square(4),"<br>");
+//일반함수
+function add(a,b){
+    return a + b;
+}
+
+document.write(add(3,4),"<br>");
+
+//익명함수 
+
+var add = function(a,b){
+    return a + b;
+}
+
+document.write(add(3,4),"<br>");
+
+//화살표함수
+var add1 = (a, b) => {
+    return a+b;
+}
+document.write(add1(3,4),"<br>");
+//화살표 함수의 간소화
+
+var add2 = (a, b) =>  a+b;
+document.write(add2(3,4),"<br>");
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

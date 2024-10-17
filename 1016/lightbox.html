@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+<body>
+    <div class="row">
+        <ul>
+            <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
+            <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
+            <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li>
+            <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
+            <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
+            <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="" id="lightboxImage">
+    </div>
+
+    <script>
+    var pics = document.querySelectorAll(".pic");
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImage = document.getElementById("lightboxImage");
+
+    pics.forEach(function(pic) {
+        pic.addEventListener("click", function() {
+           var bigLocation = this.getAttribute("data-src");
+            lightboxImage.setAttribute("src", bigLocation);
+            // 라이트 박스를 보이게 합니다.
+            lightbox.style.display = "block";
+        });
+    });
+
+    // lightbox.onclick = function(){
+    //     lightbox.style.display='none';
+    // };
+    lightbox.addEventListener("click",function(){
+        lightbox.style.display='none';
+    });
+
+
+    </script>
+
+
+</body>
+</html>

@@ -10,8 +10,15 @@
    width: 1200px;
    height: 770px;
    margin: 15px auto;
-   border: 1px solid #333;
+   border: 1px solid #333; 
 }
+.bbox{
+   display: flex;
+   flex-wrap: wrap;
+   /*  */
+}
+
+
 .bigbox h2{
    text-align: center;
    margin: 30px 0 40px;
@@ -23,7 +30,7 @@
    padding: 10px 15px 0;
    margin-left: 51px;
    margin-bottom: 30px;
-   float: left;
+   /* float: left; */
    border: 1px solid #333;
    text-align: justify;
 }
@@ -52,7 +59,8 @@
 <body>
     <div class="bigbox">
         <h2><img src="images/kong.png">꽃의 종류</h2>
-           <div class="box box1">
+         <div class="bbox">
+         <div class="box box1">
               <h3> 해바라기</h3>
               <p>
                  줄기는 높이 2~3m 정도로 곧게 자라며 전체에 잎과 더불어 거센 털이 있다. 
@@ -94,7 +102,8 @@
                  셈파플로렌스종은 사철 꽃이 피므로 사철 베고니아라고도 하며 햇빛을 
                  많이 받을수록 꽃이 많이 핀다.
               </p>
-           </div>   
+           </div> 
+         </div>    
      </div>
 </body>
 </html>
