@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Hello, World!</div>
+    <div class="myClass">First Div</div>
+    <div class="myClass">Second Div</div>
+    
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <script>
+        //const element = document.getElementById("myDiv");
+        const element =  document.querySelector("#myDiv");
+        console.log(element.textContent); // "Hello, World!" 출력
+
+        const elements = document.getElementsByClassName("myClass");
+        console.log(elements[0].textContent); // "First Div" 출력
+        console.log(elements[1].textContent); // "Second Div" 출력
+        const elements1= document.querySelectorAll(".myClass");
+        console.log(elements1[0].textContent); // "First Div" 출력
+        console.log(elements1[1].textContent); 
+
+        const paragraphs = document.getElementsByTagName("p");
+        console.log(paragraphs.length); // 2 출력
+        console.log(paragraphs[0].textContent); //Paragraph 1
+   </script>
+</body>
+</html>  

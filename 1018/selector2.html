@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="myDiv">First Div</div>
+    <div class="myDiv">Second Div</div>
+
+    <script>
+        //const element = document.querySelector(".myDiv"); // 첫 번째 myDiv 요소 선택
+        //console.log(element.textContent); // "First Div" 출력
+        const elements = document.querySelectorAll(".myDiv"); // 모든 .myDiv 요소 선택
+        elements.forEach(function(el) {
+            console.log(el.textContent);
+         });
+        //  for(var i=0;i < elements.length; i++){
+        //     console.log(elements[i].textContent);
+        //  }
+
+   </script>
+</body>
+</html>  

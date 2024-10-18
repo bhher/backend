@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding:0;} 
+ul{list-style: none;}   
+header{
+    width:1200px;
+    height:200px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+#img_slide{
+    width:1200px;
+    height:300px;
+    margin: 0 auto;
+    position: relative; 
+    /* overflow: hidden; */
+}
+#img_slide ul{
+    width:4800px;
+    height:300px;
+}
+#img_slide ul li{
+    width: 1200px;
+    float: left;
+}
+
+.prev{
+    position: absolute;
+    top:45%;
+    left:15px;
+}
+.next{
+    position: absolute;
+    top:45%;
+    right:15px; 
+}
+
+</style>
+
+
+</head>
+<body>
+    <header></header>
+    <div id="img_slide">
+        <ul id="banner">
+            <li >
+                <a href="#">
+                    <img src="images/slide1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide3.jpg" alt="">
+                </a>
+            </li>
+            <li >
+                <a href="#">
+                    <img src="images/slide1.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </div>
+    </div>
+
+<script>
+var list = document.getElementById('banner');
+var listLi = document.querySelectorAll('#banner li'); 
+var show_num = 1;  //보여지는 사진은 1장
+var total = 3;
+var li_width = document.querySelector('#banner li').offsetWidth;
+var prev = document.querySelector('.prev');
+var next = document.querySelector('.next');
+//alert(li_width);
+//var li_width= 1200;
+var num = 0;
+next.addEventListener('click',function(){
+    if(num === 3){
+        num = 0;
+        list.style.transition = "none";
+        list.style.marginLeft = "0px";
+    }
+    //한번만 실행 - 50 - 0.05 (setTimeout쓰는 이유 num =0 -> 1 가는게 동시실행방지)
+    setTimeout(function(){
+        num++;
+        list.style.transition = "margin-left 0.5s";
+        list.style.marginLeft = -li_width * num + "px";
+    },50);
+});
+prev.addEventListener('click',function(){
+    if(num === 0){
+        num = 3;
+        list.style.transition = "none";
+        list.style.marginLeft = -li_width * num + "px";
+    }
+    //한번만 실행 - 50 - 0.05 (setTimeout쓰는 이유 num =0 -> 1 가는게 동시실행방지)
+    setTimeout(function(){
+        num--;
+        list.style.transition = "margin-left 0.5s";
+        list.style.marginLeft = -li_width * num + "px";
+    },50);
+});
+
+
+function autoplay(){
+    if(num === 3){
+        num = 0;
+        list.style.transition = "none";
+        list.style.marginLeft = "0px";
+    }
+    //한번만 실행 - 50 - 0.05 (setTimeout쓰는 이유 num =0 -> 1 가는게 동시실행방지)
+    setTimeout(function(){
+        num++;
+        list.style.transition = "margin-left 0.5s";
+        list.style.marginLeft = -li_width * num + "px";
+    },50);
+}
+setInterval(autoplay, 3000);
+//autoplay라는 함수를 3초마다 실행 - 자동슬라이드 
+
+
+
+</script>
+</body>
+</html>
