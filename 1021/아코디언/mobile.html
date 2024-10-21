@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{margin: 0;padding:0;}
+ul {
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 70px;
+    position: relative;
+    background-color: skyblue; 
+}
+header h1 {
+    line-height: 70px;
+    height: 70px;
+    text-align: center;
+}
+header p.ham{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+    border: 1px dotted #333;
+    text-indent: -9999px; 
+    background: url(images/ham.png) no-repeat 50% 50%;
+    cursor: pointer;
+}
+header p.ham.on{
+    background: url(images/bar.png) no-repeat 50% 50%;
+}
+nav {
+    width: 200px;
+    background-color: lime;
+    padding: 10px 0;
+    position: absolute;
+    top:70px;
+    right:-200px;
+    transition: all 0.3s;
+}
+nav.active{
+    right:0;
+}
+nav ul li{
+    text-align: center;
+    background-color: #cf9;;
+}
+nav>ul>li>a{
+    background-color: lime;
+}
+nav ul li a{
+    display: block;
+    line-height: 40px;
+    height:40px;
+    color:#222;
+    text-decoration: none;
+}
+
+nav ul li ul li a:hover{
+    background-color: #cf0;;
+}
+nav ul li .sub{
+    height:0;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>연세 it 아카데미</h1>
+        <p class="ham">메뉴바</p>
+    </header>
+    <nav>
+        <ul class="m_menu">
+            <li>
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">제품소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">다운로드</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                </ul>
+            </li>
+    
+        </ul> 
+    </nav>
+
+<script>
+var ham = document.querySelector('.ham');
+var nav = document.querySelector('nav');
+ham.addEventListener('click',function(){
+    if(ham.classList.contains('on')){ //ham 클래스 on있으면
+        slideUp();
+        ham.classList.remove('on');
+        nav.classList.remove('active');
+    }else{
+        ham.classList.add('on');
+        nav.classList.add('active');
+    }
+
+});
+var menuLiA = document.querySelectorAll('nav>ul>li>a');
+var sub = document.querySelectorAll('.sub');
+menuLiA.forEach(function(item){
+    item.addEventListener('click',function(){
+        var subHeight = getComputedStyle(this.nextElementSibling).height;
+        if(subHeight == '0px'){
+            slideUp();
+            this.nextElementSibling.style.height = '120px';
+        }else{
+            this.nextElementSibling.style.height = '0px';
+        }
+    });
+});
+function slideUp(){
+    sub.forEach(function(item){
+        item.style.height = '0px';
+    });
+}
+
+
+</script>
+
+</body>
+</html>

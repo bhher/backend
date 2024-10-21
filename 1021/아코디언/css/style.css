@@ -1,0 +1,35 @@
+*{margin: 0;padding: 0;}
+body{background: #12a0f3;}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.container #btn-collapse{
+    padding: 10px 40px; background: #ffffff; border:none;
+	position: absolute; top:10px; right: 10%;
+}
+.container h2{
+    font-size: 2em;
+    margin-bottom: 30px; 
+    margin-top: 5px;
+    color: #fff;
+}
+
+.container #faq .panel-question{
+    width: 100%; background: #fff; margin-bottom: 20px;
+}
+
+.container #faq .panel-question .panel-heading{
+    font-weight: bold;
+    padding: 30px 20px;
+    cursor:pointer;
+    background: #ddd;
+}
+.container #faq .panel-question .panel-body{
+    padding: 30px 20px;
+    display: none;
+}
+
+.container #faq .panel-question.on .panel-body{
+    display:block;
+}

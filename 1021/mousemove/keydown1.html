@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#cat-container {
+  position: relative;
+}
+#cat {
+  width: 100px;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+</style>
+
+
+</head>
+<body>
+    <div id="cat-container">
+        <img id="cat" src="img/1.png" alt="Funny Cat">
+    </div>
+</body>
+</html>
+<script>
+    const cat = document.querySelector('#cat');
+    let posX = 0;
+    let posY = 0;
+
+    document.addEventListener('keydown',function(event){
+       // console.log(event.key);
+       moveCat(event.key);
+    });
+    function moveCat(direction){
+        const step = 20;       
+        switch(direction){
+            case 'ArrowUp':
+                posY -= step; //posY = posY - step
+                break;
+            case 'ArrowDown':
+                posY += step;
+                break;
+            case 'ArrowLeft':
+                posX -= step;
+                break;
+            case 'ArrowRight':
+                posX += step;
+                break;       
+        }
+        cat.style.transform = `translate(${posX}px, ${posY}px)`;
+
+    }
+
+
+
+
+
+</script>

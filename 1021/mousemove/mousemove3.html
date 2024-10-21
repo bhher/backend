@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+document.addEventListener('mousemove', function(e){
+    var x = e.pageX;
+    var y = e.pageY;
+    var element1 = document.getElementById('m1');
+    var element2 = document.getElementById('m2');
+    element1.style.top = (y-50) +'px';
+    element1.style.left = (x-50) + 'px';
+
+    element2.style.top = (y/2) +'px';
+    element2.style.left = (x/5) + 'px';
+
+});
+
+
+</script>
+<style>
+ #m1 {
+     width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+#m2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left: 150px;
+}
+#m3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 80px;
+    left: 150px;
+}
+
+
+</style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1"><img src="img/1.png" alt=""></h1>
+        <h1 id="m2"><img src="img/2.png" alt=""></h1>
+        <h1 id="m3"><img src="img/3.png" alt=""></h1>
+        <!-- <h1 id="m4">0000</h1> -->
+    </div>
+
+</body>
+</html>

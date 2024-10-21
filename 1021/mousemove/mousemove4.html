@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+*{margin: 0;padding: 0;
+  cursor:url(./img/mouse_img_32.png), auto;}
+html{
+    cursor:url(./img/mouse_img_32.png), auto;
+}
+ul{list-style: none;}
+a{text-decoration: none;color:#000;}
+
+#mouse_col{
+    position: fixed;
+    width:100%;
+    height:2px;
+    left:0;
+    top: 0;
+    background-color: orangered;
+    pointer-events:none;
+    /* 해당 속성이 작성된 요소는 마우스가 인식하지 않은다. */
+}
+
+
+#mouse_row{
+    position: fixed;
+    width:2px;
+    height:100%;
+    left:0;
+    top: 0;
+    background-color: orangered;
+    pointer-events:none;
+    /* 해당 속성이 작성된 요소는 마우스가 인식하지 않은다. */
+}
+
+
+</style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">main</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">skill</a></li>
+        <li><a href="#">work</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+
+    <div id="mouse_col"></div>
+    <div id="mouse_row"></div>
+
+
+    <script>
+        document.addEventListener('mousemove', function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            var element1 = document.getElementById('mouse_col');
+            var element2 = document.getElementById('mouse_row');
+            if(element1 || element2){
+                element1.style.top = y + 'px';
+                element2.style.left = x + 'px';
+            }
+        
+        });
+        
+        
+        </script>
+</body>
+</html>
