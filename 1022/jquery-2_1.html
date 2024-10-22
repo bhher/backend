@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+// 1. 홀수 인덱스 li 요소의 배경을 노란색으로 변경
+var list1OddItems = document.querySelectorAll('#list1 li:nth-child(odd)');
+list1OddItems.forEach(function(item) {
+    item.style.background = 'yellow';
+});
+
+// 2. 짝수 인덱스 li 요소의 배경을 회색으로 변경
+var list1EvenItems = document.querySelectorAll('#list1 li:nth-child(even)');
+list1EvenItems.forEach(function(item) {
+    item.style.background = 'gray';
+});
+
+// 3. 첫 번째 li 요소의 폰트 색상을 빨간색으로 변경
+var firstListItem = document.querySelector('#list1 li:first-child');
+firstListItem.style.color = 'red';
+
+// 4. 마지막 li 요소의 폰트 색상을 초록색으로 변경
+var lastListItem = document.querySelector('#list1 li:last-child');
+lastListItem.style.color = 'green';
+
+// 5. 두 번째 li 요소의 폰트 스타일을 이탤릭체로 변경
+var secondListItem = document.querySelector('#list1 li:nth-child(2)');
+secondListItem.style.fontStyle = 'italic';
+
+// 6. 인덱스가 0, 1인 li 요소에 하늘색 점선 테두리 추가
+var ltTwoItems = document.querySelectorAll('#list1 li:nth-child(-n+2)');
+ltTwoItems.forEach(function(item) {
+    item.style.border = 'dotted 2px aqua';
+});
+
+// 7. 인덱스가 3 이상인 li 요소에 보라색 점선 테두리 추가
+var gtTwoItems = document.querySelectorAll('#list1 li:nth-child(n+4)');
+gtTwoItems.forEach(function(item) {
+    item.style.border = 'dotted 2px purple';
+});
+
+// 8. 2의 배수인 li 요소의 배경을 주황색으로 변경
+var list2EvenItems = document.querySelectorAll('#list2 li:nth-child(2n)');
+list2EvenItems.forEach(function(item) {
+    item.style.background = 'orange';
+});
+
+// 9. '리스트11'을 포함하는 li 요소의 텍스트 색상을 빨간색으로 변경
+var containsList11 = Array.from(document.querySelectorAll('#list2 li')).filter(function(item) {
+    return item.textContent.includes('리스트11');
+});
+containsList11.forEach(function(item) {
+    item.style.color = 'red';
+});
+
+// 10. span을 포함하는 li 요소의 텍스트 색상을 하늘색으로 변경
+var hasSpanItems = document.querySelectorAll('#list2 li span');
+hasSpanItems.forEach(function(span) {
+    span.parentElement.style.color = 'aqua';
+});
+
+// 11. class가 theObj인 li 요소의 폰트 크기를 20px로 변경
+var theObjItems = document.querySelectorAll('#list2 li.theObj');
+theObjItems.forEach(function(item) {
+    item.style.fontSize = '20px';
+});
+
+// 12. a 태그를 포함한 li 요소의 배경을 빨간색으로 변경
+var aTagItems = document.querySelectorAll('#list2 li a');
+aTagItems.forEach(function(a) {
+    a.style.backgroundColor = 'red';
+});
+
+// 13. .theTitle 요소의 HTML을 변경
+var theTitle = document.querySelector('.theTitle');
+theTitle.innerHTML = "<a href='#'>요소 객체 조작</a>";
+
+// 14. .obj1 요소의 텍스트를 '리스트_2'로 변경
+var obj1 = document.querySelector('.obj1');
+obj1.textContent = '리스트_2';
+
+// 15. #list3의 마지막에 li 요소 추가
+var list3 = document.querySelector('#list3');
+var newListItem = document.createElement('li');
+newListItem.textContent = 'list_6';
+list3.appendChild(newListItem);
+
+// 16. #list3의 첫 번째에 li 요소 추가
+var firstNewListItem = document.createElement('li');
+firstNewListItem.textContent = 'list_1';
+list3.insertBefore(firstNewListItem, list3.firstChild);
+
+// 17. 5번째 li 요소 이전에 새 요소 추가
+var insertBeforeItem = document.createElement('li');
+insertBeforeItem.textContent = 'insertBefore';
+var fourthItem = list3.children[4];
+list3.insertBefore(insertBeforeItem, fourthItem);
+
+// 18. 6번째 li 요소 이후에 새 요소 추가
+var insertAfterItem = document.createElement('li');
+insertAfterItem.textContent = 'insertAfter';
+var fifthItem = list3.children[5];
+fifthItem.parentNode.insertBefore(insertAfterItem, fifthItem.nextSibling);
+
+// 19. .obj1 요소를 복제하고 #list3 마지막에 추가
+var clonedObj1 = obj1.cloneNode(true);
+list3.appendChild(clonedObj1);
+
+// 20. #list3의 첫 번째 li 요소 삭제
+list3.removeChild(list3.firstChild);
+
+// 21. 첫 번째 li 요소에 클래스 값을 'obj2'로 설정
+var firstList3Item = list3.children[0];
+firstList3Item.setAttribute('class', 'obj2');
+
+// 22. class가 'obj2'인 요소의 배경을 노란색으로 변경
+var obj2Item = document.querySelector('.obj2');
+obj2Item.style.backgroundColor = 'yellow';
+
+// 23. 첫 번째 li 요소에 'obj3' 클래스 추가
+firstList3Item.classList.add('obj3');
+
+// 24. class가 'obj3'인 요소의 폰트 색상을 빨간색으로 변경
+var obj3Item = document.querySelector('.obj3');
+obj3Item.style.color = 'red';
+
+});
+
+
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 html조작</h1>
+        <h2>탐색 선택자</h2>
+        <ul id="list1">
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+            <li>리스트6</li>
+            <li>리스트7</li>
+        </ul>
+        <ul id="list2">
+            <li>리스트8</li>
+            <li class="theObj">리스트9</li>
+            <li><span>리스트10</span></li>
+            <li>리스트11</li>
+            <li><a href="#">리스트12</a></li>
+            <li>리스트13</li>
+            <li>리스트14</li>
+        </ul>
+
+        <h2 class="theTitle">html 조작</h2>
+        <ul id="list3">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+    <!-- 다운로드 방신 -->
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- 네트워크 방식 -->
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {//html,css 를 읽고 나서 실행해라
+      var elements = document.querySelectorAll('*');
+      elements.forEach(function (element) {
+        element.style.fontSize = '13px';
+      });
+
+      // var h1Element = document.querySelector('h1');
+      // if(h1Element){
+      //     h1Element.style.color='red';
+      // }
+      document.querySelector('h1').style.color = 'red';
+      var firstTitleElement = document.getElementById('firstTitle');
+      if (firstTitleElement) {
+        firstTitleElement.style.color = 'green';
+      }
+      var newTitleElements = document.querySelectorAll('.nextTitle');
+      newTitleElements.forEach(function (element) {
+        element.style.color = 'blue'
+      })
+
+      var obj3LiElements = document.querySelectorAll(".obj3>li");
+      obj3LiElements.forEach(function (element) {
+        element.style.fontWeight = "bold";
+      });
+
+      var theObj1Elements = document.querySelectorAll(".obj3>.theObj1");
+      theObj1Elements.forEach(function (element) {
+        element.style.color = "purple";
+      });
+
+      var obj5Parent = document.querySelector('.obj5').parentNode;
+      if (obj5Parent) {
+        obj5Parent.style.border = 'dashed 2px #f00';
+      }
+      document.querySelector('.obj4').nextElementSibling.style.color = 'orange'
+      document.querySelector('.obj5').previousElementSibling.style.textAlign = 'right';
+
+
+      var obj6Siblings = Array.apply(null, document.querySelector('.obj6').parentElement.children);
+      for (var _d = 0, obj6Siblings_1 = obj6Siblings; _d < obj6Siblings_1.length; _d++) {
+        var item = obj6Siblings_1[_d];
+        (item !== document.querySelector('.obj6')) && (item.style.textAlign = 'center');
+      }
+
+      var textInputElements = document.querySelectorAll('input[type=text]');
+      textInputElements.forEach(function (element) {
+        element.style.backgroundColor = '#ccc';
+        element.style.border = 'solid 1px #000';
+        element.style.color = 'green';
+      });
+    })
+
+
+
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제이쿼리</h1>
+        <h2 id="firstTitle">선택자</h2>
+        <h3 class="nextTitle">부모 요소 선택자</h3>
+        <div>
+          <p class="obj1">현재 id가 "obj1"인 요소를 기준으로, 부모 요소는 ‘div’요소입니다.</p>
+        </div>
+        <h3>자식 요소 선택자</h3>
+        <ul class="obj3">
+          <li>리스트1</li>
+          <li class="theObj1">리스트2</li>
+          <li>리스트3</li>
+        </ul>
+        <h3>형 요소 선택자</h3>
+        <ul>
+          <li>리스트4</li>
+          <li class="obj4">리스트5</li>
+          <li>리스트6</li>
+        </ul>
+        <h3>동생 요소 선택자</h3>
+        <ul>
+          <li>리스트7</li>
+          <li class="obj5">리스트8</li>
+          <li>리스트9</li>
+        </ul>
+        <h3>형제 요소들 선택자</h3>
+        <ul>
+          <li>리스트10</li>
+          <li class="obj6">리스트11</li>
+          <li>리스트12</li>
+        </ul>
+        <h3>입력 요소 선택자</h3>
+        <p><label for="user_name">이름</label>
+          <input type="text" name="user_name" id="user_name" />
+        </p>
+      </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<script>
+$(function(){
+        $("#list1 li:even").css("background-color", "lightblue");
+        $("#list2 li").has("span").css("color", "purple");
+        //$('#list2 li:has(span)').css('color', 'purple');
+        $("#list1 li").first().css("font-size", "20px");
+        //$("#list1 li:first").css("font-size", "20px");
+        $("#list2 .highlight").css("background-color", "orange");
+        //$("#list2 a").css("background-color", "yellow");
+        //a 적용 -  항목E라는 글자만 노락색 
+        $('#list2 li:has(a)').css('background', 'yellow');
+        //li 적용(블럭요소) - 한줄 전체에 노란색
+        $("#list1").append("<li>새항목</li>");
+        //$("#list2 li").eq(1).css("font-style", "italic"); //메서드방식
+        $("#list2 li:eq(1)").css("font-style", "italic"); //위와 동일 -선택자방식
+
+        //$("#list2 li").lt(1).css("font-size", "50px"); //lt나 gt는 밖에 쓰면 안됨
+        $("#list2 li:lt(1)").css("font-size", "50px");
+
+});
+
+
+
+</script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>탐색 선택자 및 html 조작 문제</h1>
+        <ul id="list1">
+            <li>항목1</li>
+            <li>항목2</li>
+            <li>항목3</li>
+            <li>항목4</li>
+            <li>항목5</li>
+        </ul>
+        <ul id="list2">
+            <li>항목A</li>
+            <li class="highlight">항목B</li>
+            <li><span>항목C</span></li>
+            <li>항목D</li>
+            <li><a href="#">항목E</a></li>
+        </ul>
+    </div>
+</body>
+</html>

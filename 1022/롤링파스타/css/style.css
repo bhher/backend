@@ -1,0 +1,69 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+#wrap{
+    width: 100%;
+    height:535px;
+    background: url(../img/intro_bg.png) 0 0;
+}
+.bigbox{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.left{
+    width:30%;
+    float:left;
+    height:400px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+.left img{
+    width:50%;
+    margin-top: 30px;
+}
+.r_top{
+    float: left;
+    width:65%;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+.r_top p, .r_top h3{
+    text-align: center;
+    padding: 3px 0;
+}
+.r_top p:nth-child(1){
+    padding: 15px 0;
+}
+.r_top h3{color:#163760;}
+.r_bottom{
+    float: left;
+    width:65%;
+}
+.r_bottom ul li{
+    width:190px;
+    height:250px;
+    float:left;
+    height: 250px;
+    text-align: center;
+    border:1px solid #333;
+}
+/* 그림과 글자를 포함 */
+.r_bottom ul li a{
+    display: block;
+    width: 150px;
+    height:150px;
+    margin: 20px auto;
+}
+.r_bottom ul li .s1{
+    display: block;
+}
+.r_bottom ul li .s2{
+    display: none;
+}
+
+.r_bottom ul li:hover .s1{
+    display: none;
+}
+.r_bottom ul li:hover .s2{
+    display: block;
+}
