@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+.highlight {
+            background-color: yellow;
+}
+.active {
+    color: red;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+
+    $("#myDiv").mouseenter(function(){
+        $(this).addClass("highlight");
+    });
+    $("#myDiv").mouseleave(function(){
+        $(this).removeClass("highlight");
+    });
+
+// 버튼 클릭 시 active 클래스 토글
+    // $("#myButton").click(function() {
+    //     $("#myDiv").toggleClass("active");
+    // });
+
+    $("#myButton").click(function() {
+       if($("#myDiv").hasClass('active')){
+            alert("클래스가 현재 있군요");
+            $("#myDiv").removeClass("active");
+       }else{
+            alert("클래스가 현재 없군요");
+            $("#myDiv").addClass("active");
+       }
+    });
+
+
+});
+
+
+</script>
+
+</head>
+<body>
+    <div id="myDiv">Hover over me!</div>
+    <button id="myButton">Toggle Class</button>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <script>
+       document.addEventListener('DOMContentLoaded',function(){
+        
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var textZone = document.getElementById('textZone');
+        btn1.addEventListener('click',function(){
+            textZone.style.color = 'blue';
+        });
+        btn2.addEventListener('mouseover', function () {
+                textZone.style.backgroundColor = 'yellow';
+        });
+
+        btn2.addEventListener('focus', function () {
+            textZone.style.backgroundColor = 'yellow';
+        });
+
+
+       });
+
+
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>이벤트 연습</h1>
+        <p id="textZone">웹 브라우저에서 버튼을 클릭한다거나 mouse를 움직이거나 하는 모든 행위를 ‘이벤트’라고 합니다. 그리고 이벤트발생 시 함수의 실행문이 수행되도록 이벤트를 지정하는 것을
+            이벤트 핸들러라고 합니다.
+        </p>
+        <h2>click 메서드</h2>
+        <p><button id="btn1">click</button> </p>
+        <h2>mouseover 메서드</h2>
+        <p><button id="btn2">mouseover</button> </p>
+        <h2>bind 메서드</h2>
+        <p><button id="btn3">bind</button> </p>
+        <h2>mouseleave 메서드</h2>
+        <div id="listWrap">
+            <h3>관련 사이트</h3>
+            <ul class="list1">
+                <li><a href="#">list1</a></li>
+                <li><a href="#">list2</a></li>
+                <li><a href="#">list3</a></li>
+                <li><a href="#">list3</a></li>
+            </ul>
+        </div>
+        <h2>toggle 메서드</h2>
+        <button id="btn4">toggle</button>
+        <p>누를 때마다 실행 함수를 차례대로 번갈아 가면서 실행합니다. <br />위의 toggle 버튼을 계속 클릭해 보세요!!
+        </p>
+        <h2>hover 메서드</h2>
+        <h3><a href="#" class="hover">hover</a></h3>
+    </div>
+</body>
+</html>
