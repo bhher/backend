@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+<style>
+*{margin: 0;padding:0 ;}
+ul{list-style: none;}
+li{float: left;width:80px;}
+/* 사진한장의 크기는 72 인데 magin 8까지 합쳐서 li 넓이 80px */
+h1{text-align: center;}
+#banner_wrap{
+    width: 260px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    /* 전체넓이는 300(패딩포함 ) */
+}
+
+#frame{
+    width: 232px;
+    height: 54px;
+    position: relative;
+    margin: 10px auto;
+    border: 1px solid blue;
+    /* overflow: hidden; */
+}
+
+/* ul */
+#banner{ 
+    width:800px;
+    border:1px solid red;
+    height: 54px;
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>.
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt=""></a></li>
+               
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </p>
+    </div>
+
+    <script>
+        $(function(){
+            var num = 0;
+            var li_w = 80;
+            var copy1 = $('#banner li:lt(3)').clone();
+            //#banner li중에 index번호가 3보다 작은 (0,1,2) 
+            //clone() - ctrl + c 복사 copy1변수에 대입
+            $('#banner').append(copy1);
+            //복사한 li  #banner맨뒤로 추가 
+
+            $('.next').click(function(){
+                if(num ==5){
+                    num = 0;
+                    $('#banner').css('margin-left','0');
+                }
+
+                num++;
+                $('#banner').stop().animate({'margin-left':-li_w*num},300);
+                return false;
+            });
+
+            $('.prev').click(function(){
+                if(num ==0){
+                    num = 5;
+                    $('#banner').css('margin-left',-li_w*num);
+                }
+
+                num--;
+                $('#banner').stop().animate({'margin-left':-li_w*num},300);
+                return false;
+            });
+
+        //자동슬라이드
+        setInterval(autoplay, 2000);
+
+        function autoplay(){
+            if(num ==5){
+                num = 0;
+                $('#banner').css('margin-left','0');
+            }
+
+            num++;
+            $('#banner').stop().animate({'margin-left':-li_w*num},300);
+        }    
+
+
+
+        });
+
+
+
+    </script>
+</body>
+</html>

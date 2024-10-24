@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding:0;} 
+ul{list-style: none;}   
+header{
+    width:1200px;
+    height:200px;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+#img_slide{
+    width:1200px;
+    height:300px;
+    margin: 0 auto;
+    position: relative; 
+    /* overflow: hidden; */
+}
+#img_slide ul{
+    width:4800px;
+    height:300px;
+}
+#img_slide ul li{
+    width: 1200px;
+    float: left;
+}
+
+.prev{
+    position: absolute;
+    top:45%;
+    left:15px;
+}
+.next{
+    position: absolute;
+    top:45%;
+    right:15px; 
+}
+
+</style>
+
+
+</head>
+<body>
+    <header></header>
+    <div id="img_slide">
+        <ul id="banner">
+            <li >
+                <a href="#">
+                    <img src="images/slide1.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide2.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/slide3.jpg" alt="">
+                </a>
+            </li>
+            <li >
+                <a href="#">
+                    <img src="images/slide1.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="btn">
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </div>
+    </div>
+
+<script>
+
+
+
+
+</script>
+</body>
+</html>

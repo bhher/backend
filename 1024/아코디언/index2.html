@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        *{margin: 0;padding: 0;border:0;}
+        body{background-color: #252422;}
+        dl{
+            width: 800px;
+            margin: 50px auto 0;
+        }
+        dt{
+            line-height: 35px;
+            font-size: large;
+            text-indent: 3em;
+            font-weight: bold;
+            color:#fff;
+            height: 35px;
+            background: url(a1.jpg) no-repeat 0 0;
+        }
+        dt.over{
+            background: url(a2.jpg) no-repeat 0 0;
+            cursor: pointer;
+        }
+        dt.selected{
+            background: url(a3.jpg) no-repeat 0 0;
+            cursor: pointer;
+        }
+
+
+
+        dd{
+            margin: 0;
+            height:300px;
+            background-color: #d4d0c8;
+        }
+        dd p{
+            margin: 0;
+            text-indent: 1em;
+            padding: 20px;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            // - DD중 첫번째만 보여줄것
+            // dt중 첫번째에 addClass 'selected' 넣어줄것 
+           //$('dd').hide();
+           //$('dd:eq(0)').show();
+           $('dd:not(:first)').hide(); //1번째만 제외하고 숨기기(2,3)
+           $('dt:eq(0)').addClass('selected');
+                    
+            //1. dl dt클릭
+            //2. 클릭한(this) 다음(next)에 dd가 display == 'none' 물어보고
+            //3. 모든(dd) slideup
+            //3-1. 현재(this)클릭한 다음(next)에 있는(dd)를 slideDown
+            //4. dt에 적용된 selected(class) 제거(removeClass)하고
+            //5. 현재 클릭된 dt(this)에 addClass('selected')
+            //6. mouseover시 over 라는 클래스를 addClass하고
+            //7.mouseout시 removeClass("over") 하시오	
+            $('dl dt').click(function(){ //1번
+                var abc = $(this).next('dd').css('display'); 
+                //alert(abc);
+                if(abc == 'none'){ //2
+                    $('dd').slideUp('slow'); //3
+                    $(this).next('dd').slideDown('slow');
+                    $('dl dt').removeClass('selected')//4번
+                    $(this).addClass('selected');
+                }
+            });
+
+            // $('dl dt').mouseover(function(){
+            //     $(this).addClass('over');
+            // });
+            // $('dl dt').mouseout(function(){
+            //     $(this).removeClass('over');
+            // });
+
+            $('dl dt').hover(function(){
+                $(this).addClass('over');
+            },function(){
+                $(this).removeClass('over');
+            });
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>Step.1</dt>
+        <dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis neque urna, molestie id cursus non, bibendum nec magna. Mauris consequat faucibus ante sollicitudin ullamcorper. Proin et felis orci. Nulla vitae diam sit amet felis semper ultricies. Nulla vitae mauris sit amet augue pulvinar pulvinar. Donec tincidunt viverra turpis eget suscipit. Morbi eu lacus iaculis turpis suscipit pretium. Aenean ultricies scelerisque dictum. Phasellus tincidunt, nibh lacinia facilisis aliquam, lacus quam condimentum orci, id lacinia justo odio vel purus. Mauris molestie tortor eu purus facilisis at congue sapien commodo. Sed ac eros vitae odio ultrices mollis nec a lorem. Phasellus sit amet dolor nec tellus consequat ornare sit amet ut ipsum. Vestibulum sagittis, mi sed pulvinar semper, lacus mauris lobortis eros, eu egestas est lectus nec lacus. Donec in lacus quis elit consectetur accumsan sit amet sed tortor. Etiam id vestibulum libero. Nam faucibus tincidunt felis, eu feugiat nibh fringilla vel. Donec adipiscing dictum imperdiet. Nulla ac fringilla neque. Curabitur posuere euismod est vel vehicula. Curabitur quis ligula sit amet quam tempus venenatis.</p></dd>
+        <dt>Step.2</dt>
+        <dd><p>Integer rhoncus felis mauris. Donec massa nisi, posuere vel posuere vel, suscipit sed magna. Sed congue scelerisque odio, faucibus tempor nisl posuere condimentum. In eu tellus vitae elit consequat pretium. Maecenas nec ultrices dolor. Curabitur eu pulvinar turpis. Aenean vel tortor justo, id dapibus velit. Mauris pulvinar massa sit amet erat mollis sit amet ornare tellus aliquet. Quisque ullamcorper elementum libero, ut vehicula neque placerat nec. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Morbi et ante turpis, et fringilla tortor. In hac habitasse platea dictumst. Proin eros urna, sagittis vitae tristique et, ullamcorper ac leo. Donec elementum arcu tortor. Praesent tincidunt dui in est adipiscing ac lobortis lorem porttitor. Nullam et dui elit. Vivamus hendrerit vestibulum enim, quis lobortis erat viverra vitae. Donec at pellentesque mi. Mauris lobortis libero ac metus ultricies accumsan. </p></dd>
+        <dt>Step.3</dt>
+        <dd><p>Integer pretium porttitor lectus at tempor. Donec nec cursus elit. Maecenas ornare malesuada urna vitae lobortis. Sed vulputate sapien quis purus cursus consectetur. Aenean nulla neque, egestas ut accumsan nec, convallis vel enim. Vestibulum vehicula interdum diam nec condimentum. Etiam in condimentum justo. Fusce a tortor metus, id pellentesque orci. Sed facilisis, tellus quis tempus faucibus, justo elit sodales lorem, eget placerat lectus risus bibendum ipsum. Donec varius mattis quam eu consequat. Praesent ut metus nec nibh tincidunt suscipit. Nam vulputate sodales egestas. Sed orci lectus, vestibulum ac gravida eget, congue non velit. Morbi rutrum convallis orci, in hendrerit arcu vulputate a. Aliquam aliquam facilisis libero, sit amet facilisis lacus tincidunt ac. Sed viverra nulla sit amet turpis egestas nec molestie justo congue. Vivamus a lacinia sem. Aenean ut metus arcu, non ornare orci. Praesent feugiat est eu tellus dictum ac imperdiet nisi imperdiet.
+           FDDFGDFGDDFG </p></dd>
+    </dl>
+</body>
+</html>
