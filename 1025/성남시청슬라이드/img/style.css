@@ -1,0 +1,31 @@
+*{margin: 0;padding: 0;}
+.contents{
+	width:1200px;
+	margin:0 auto;
+	height:800px;
+	border:1px solid #333;
+}
+.c_group1{
+	width:718px;
+	height:425px;
+	float:left;
+}
+.pop_slide{
+	width:718px;
+	height:385px;
+	position:relative;
+	
+}
+.pop_slide ul li{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	left:100%;
+	list-style:none;
+	/*모든사진을 100%뒤로 보낸다.*/
+}
+.pop_slide ul li:nth-child(1){
+	left:0;
+	/* 첫번째 사진만 보이게한다.(left:0) */
+}

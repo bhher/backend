@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+      *{margin: 0; padding: 0;}
+      ul,li{list-style: none;}
+      a{text-decoration: none; color:#000;}
+      .cf:after{content:'';display: block;clear: both;}
+     
+      #banner_wrap{
+        width:1300px;
+        border: 1px solid #333;
+        margin: 100px auto 0;
+      }
+      #banner{
+          width: 78px;
+          height: 26px;
+          margin-left: 10px;
+          float: left;
+          position: relative;
+      }
+    #banner li{
+          margin-top: 10px;
+          float: left;
+      }
+     #banner li a{
+          display: block;
+          width: 26px;
+          height: 26px;
+          /* box-sizing: border-box;
+          border: 1px solid #333; */
+      }
+    #banner li:nth-child(1) a{
+      background: url(./img/btn1.png) no-repeat 0 0;
+    }
+    #banner li:nth-child(2) a{
+      background: url(./img/btn1.png) no-repeat -26px 0;
+    }
+    #banner li:nth-child(2).on a{
+      background: url(./img/btn1.png) no-repeat -52px 0;
+    }
+    #banner li:nth-child(3) a{
+      background: url(./img/btn1.png) no-repeat -78px 0;
+    }
+    #slide{
+      width:1188px;
+      height:50px;
+      float:left;
+    }
+    #frame{
+        width:1188px;
+        height:50px;
+        
+      }
+    .ban{
+      width:5200px;background-color: yellow;
+    } 
+    .ban li{
+          width: 198px;
+          height: 48px;
+          float: left;
+          margin-top: 1px;
+      }
+
+    
+    </style>
+    <script>
+     $(function(){
+        var num = 0;
+        var li_w = $(".ban li:eq(0)").width();
+        //alert(li_w);
+        var total = $('.ban li').length; //li 갯수  - 20개
+        //alert(total);
+        var copy = $(".ban li:lt(6)").clone();
+        $(".ban").append(copy);
+       $("#banner li:nth-child(3)").click(function(){//next
+          if(num==total){
+            num = 0;
+            $(".ban").css("margin-left","0");
+          } 
+          num++;
+          $('.ban').stop().animate({marginLeft:-li_w*num},500);
+       });
+      
+       $("#banner li:nth-child(1)").click(function(){//prev
+          if(num==0){
+            num = total;
+            $(".ban").css("margin-left",-li_w*num); 
+          } 
+          num--;
+          $('.ban').stop().animate({marginLeft:-li_w*num},500)
+       });
+
+       var id = setInterval(auto,3000);
+       function auto(){
+        if(num==total){
+            num = 0;
+            $(".ban").css("margin-left","0");
+          } 
+          num++;
+          $('.ban').stop().animate({marginLeft:-li_w*num},500);
+       }
+
+    $('#banner li:nth-child(2)').click(function(){
+       var k = $(this).hasClass('on');
+       if(k == false){
+        $(this).addClass('on');
+        clearInterval(id); // 슬라이드를 멈춰라
+       }else{
+        $(this).removeClass('on');
+        id = setInterval(auto,3000);
+       }
+    });
+
+
+      }); 
+    </script>
+    
+    
+    
+    
+    </head>
+    <body>
+    <div id="banner_wrap" class="cf">
+      <h2>배너모음</h2>
+      
+      <ul id="banner">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+      <div id="slide">
+        <div id="frame">
+          <ul class="ban">
+            <!-- (li>a[href=#]>img[src=img/img_banner$.jpg])*20  -->
+            <li><a href="#"><img src="img/img_banner01.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner02.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner03.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner04.jpg" alt=""></a></li>
+           
+            <li><a href="#"><img src="img/img_banner06.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner07.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner08.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner09.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner10.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner11.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner12.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner13.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner14.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner15.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner16.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner17.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner20.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner21.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner22.jpg" alt=""></a></li>
+            <li><a href="#"><img src="img/img_banner23.jpg" alt=""></a></li>
+          </ul>
+        </div>
+      </div>
+</body>
+</html>
