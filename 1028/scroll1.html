@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+    *{margin: 0; padding: 0;}
+    .box{
+        width: 150px;
+        height: 150px;
+    }
+    .box1{background-color: aqua; position: absolute;top:300px;}
+    .box2{background-color: blueviolet; position: absolute;top:700px; left: 150px;}
+    .box3{background-color: brown;  position: absolute;top:1200px; left: 300px;}
+    .box4{background-color: coral;  position: absolute;top:1800px; left: 575px;} 
+    </style>
+
+    <script>
+$(function(){
+
+   var abox = $('.box1').offset().top;   
+   var bbox = $('.box2').offset().top;
+    // alert(abox);
+    var cbox = $('.box3').offset().left;
+
+    // var dbox = $('.box4').css(top, "2300px");
+    // (top, "2300px"); top 에 2300px 넣어라
+    // var dbox = $('.box4').css(top);
+    // $(''.box4').css(top) - box4에 top 값을 알아내라
+    // alert(dbox); 1800px
+    var dbox = parseInt($('.box4').css("top"));
+    // 1800px -> 1800 정수값만 가능
+    alert(dbox);
+});
+
+
+    </script>
+
+</head>
+<body>
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>    
+</body>
+</html>

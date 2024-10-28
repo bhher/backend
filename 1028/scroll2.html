@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+*{margin: 0;padding: 0;}
+body{
+    height: 3000px;
+}
+.sTop{
+    position: fixed;
+}
+.box{
+    width: 150px; height:150px;
+}
+.box1{
+    background-color: aqua;
+    position: absolute;
+    top:300px;
+    left:-150px;}
+.box2{background-color: blueviolet;
+    position: absolute;
+    top:1200px;
+    left:-150px;}
+.box3{background-color: brown;
+    position: absolute;top:1800px;
+    right:-200px;}
+.box4{background-color: coral;
+    position: absolute;
+    top:2800px;
+    right:-200px;
+    transition: right 0.3s;    
+}
+.box4.on{
+    right: 500px;
+}
+    
+</style>
+<script>
+$(function(){
+  $(window).scroll(function(){
+    //화면 스크롤 시(스크롤 할때)
+    var sct = $(window).scrollTop();
+    //$(this).scrollTop();
+    //스크롤 위치를 수치로 표현 (스크롤 양)
+    console.log(sct);
+    $('sTop').text(sct);
+    //sct의 값을 .sTop에 반환 (기존의 내용 삭제)
+    //$('.sTop').html(sct); - 변경가능
+    if(sct >= 10){
+    $('.box1').stop().animate({left:50+"%"},800);
+    }
+    if(sct >= 500){
+        $('.box2').stop().animate({left:50+"%"},800);
+    }
+    if(sct >= 1200){
+        $('.box3').stop().animate({left:50+"%"},800);
+    }
+    if(sct >= 2200){
+        $('.box4').addClass('on');
+    }
+
+
+
+  });
+
+
+});
+
+
+</script>
+
+</head>
+<body>
+    <h1 class='sTop'>0000</h1>
+    <div class="box box1">박스1</div>    
+    <div class="box box2">박스2</div>    
+    <div class="box box3">박스3</div>    
+    <div class="box box4">박스4</div>    
+</body>
+</html>

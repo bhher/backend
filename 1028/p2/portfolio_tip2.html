@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>portfolio tip2 : 스크롤 콘텐츠 효과</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic">
+<link rel="stylesheet" href="css/reset.css">
+<!-- https://html5up.net/landed -->
+<style>
+body {
+	margin: 20px;
+	padding: 20px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1rem;
+	background: #f1f1f1;
+	color: #555;
+	height:3800px;
+}
+.container {
+	min-width: 440px;
+}
+.title {
+	font-size: 1.5rem;
+	font-weight: 300;
+	color: #555;
+}
+.container {
+	margin-top: 39px;
+}
+.container div {
+	width: 100%;
+	height: 700px;
+}
+
+.container h2 {
+	line-height: 1.5;
+	font-weight: 300;
+	font-size: 24px;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.container > div > img {
+	margin-top: 100px;
+	opacity: 0;
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+}
+.container> div.on > img {
+	margin-top: 20px;
+	opacity: 1;
+}
+
+</style>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+
+<body>
+<h1 class="title">jQuery UI Pattern</h1>
+<div class="container">
+	<div class="area1">
+		<h2>area1</h2>
+		<img src="images/work1.jpg" alt="">
+	</div>
+	<div class="area2">
+		<h2>area2</h2>
+		<img src="images/work2.jpg" alt="">
+	</div>
+	<div class="area3">
+		<h2>area3</h2>
+		<img src="images/work3.jpg" alt="">
+	</div>
+	<div class="area4">
+		<h2>area4</h2>
+		<img src="images/work4.jpg" alt="">
+	</div>
+	<div class="area5">
+		<h2>area5</h2>
+		<img src="images/work5.jpg" alt="">
+	</div>
+</div>
+</body>
+</html>
