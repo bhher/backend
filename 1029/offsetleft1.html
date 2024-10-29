@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+
+<style>
+*{margin: 0;padding: 0;}
+a {text-decoration: none;}/*display:flex*/
+section{width:400%;}
+article { width: 25%;height: 100vh;float:left}
+#article1 {
+    background-color: burlywood
+}
+
+#article2 {
+    background-color: coral;
+}
+
+#article3 {
+    background-color: darkcyan
+}
+
+#article4 {
+    background-color: darksalmon
+}
+nav{
+    position: fixed;
+    top:0;
+    height:100px;
+    width:100%;
+    background:rgba(255, 255, 255, 0.5);
+}
+nav ul{
+    width:1000px; height:100px;
+    margin: 0 auto;
+    list-style: none;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 32px;
+    color: #000;
+    text-align: center;
+}
+nav ul li.on a {
+            color: orange;
+            font-weight: bold;
+    }
+
+    h2 {
+        font-size: 50px;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="on"><a href="#article1">회사소개</a></li>
+            <li><a href="#article2">제품소개</a></li>
+            <li><a href="#article3">커뮤니티</a></li>
+            <li><a href="#article4">다운로드</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article id="article1"></article>
+        <article id="article2"></article>
+        <article id="article3"></article>
+        <article id="article4"></article>
+    </section>
+    <h2>현재스크롤위치 : <span id="sTop">000</span></h2>
+
+<script>
+$(function(){
+    var a0 = $("section > article").eq(0).offset().left;
+    var a1 = $("section > article").eq(1).offset().left;
+    var a2 = $("section > article").eq(2).offset().left;
+    var a3 = $("section > article").eq(3).offset().left;
+    console.log(a0, a1, a2, a3);
+    //article이 화면 최상단부터 떨어진거리
+
+    
+
+    $('nav ul li').click(function(){
+       var i = $(this).index();
+       //alert(i); 
+       var offset_t = $('section > article').eq(i).offset().left;
+       //alert(offset_t);
+        $('html, body').stop().animate({scrollLeft:offset_t},1300);
+        $('nav ul li').removeClass('on');
+        $('nav ul li').eq(i).addClass('on');
+       // $(this).addClass('on');
+
+        return false;//링크금지
+    });
+
+
+});
+// var sct;
+// $(window).scroll(function(){
+//     sct  = $(this).scrollLeft();
+// });
+var scrollPosition = 0;
+$('section > article').mousewheel(function(event,d){
+    event.preventDefault();//세로 스크롤바 사용금지
+    //event.originalEvent.deltaY 마우스휠이벤트에서 세로방향스크롤
+    //양수값 : 마우스 휠을 아래로 내렸을때(+100)
+    //음수값 : 마우스 위로 올렸을때 (-100)
+
+    console.log(event.originalEvent.deltaY);
+    // scrollPosition += event.originalEvent.deltaY;
+    scrollPosition += (-d*100);
+    $('html, body').scrollLeft(scrollPosition);
+    
+
+    
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js" ></script>
+<script>
+$(function(){  
+  $(window).mousemove(function(e){
+    var x = e.pageX;
+    var y = e.pageY;
+    $('#m1').text(x);
+    $('#m2').html(y);
+  });
+});
+
+
+</script>    
+</head>
+<body>
+    <div id="wrap">
+        <h1 id = "m1">0000</h1>
+        <h1 id = "m2">0000</h1>
+      </div>
+</body>
+</html>

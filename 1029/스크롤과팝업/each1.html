@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+<style>
+.s0{color:red;}
+.s1{color:blue;}
+.s2{color:green;}
+.s3{color:brown;}
+</style>
+<script>
+$(function(){
+    for(var i=0; i<=3;i++){
+        $('p').eq(i).addClass('s'+i);
+    }
+
+});
+
+</script>
+
+
+</head>
+<body>
+    <p>첫번째</p>
+    <p>두번째</p>
+    <p>세번째</p>
+    <p>네번째</p>
+</body>
+</html>

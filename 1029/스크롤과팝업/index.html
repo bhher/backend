@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1>현재스크롤위치 : <span id="sTop">000</span></h1>
+    <nav>
+        <ul>
+            <li class="on"><a href="#">Mainmenu1</a></li>
+            <li><a href="#">Mainmenu2</a></li>
+            <li><a href="#">Mainmenu3</a></li>
+            <li><a href="#">Mainmenu4</a></li>
+            <li><a href="#">Mainmenu5</a></li>
+            <li><a href="#">Mainmenu6</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="area1" class="main"><p>area1</p></div>
+        <div id="area2" class="main"><p>area2</p></div>
+        <div id="area3" class="main"><p>area3</p></div>
+        <div id="area4" class="main"><p>area4</p></div>
+        <div id="area5" class="main"><p>area5</p></div>
+        <div id="area6" class="main"><p>area6</p></div>
+    </section>
+
+    <div id="floatdiv">
+        <ul>
+            <li class="on"><span id="btn1"></span></li>
+            <li><span id="btn2"></span></li>
+            <li><span id="btn3"></span></li>
+            <li><span id="btn4"></span></li>
+            <li><span id="btn5"></span></li>
+            <li><span id="btn6"></span></li>
+        </ul>
+    </div>
+    <div id="popup">
+        <img src="images/popup.jpg" alt="" usemap="#pop">
+        <map name="pop" id="pop">
+            <area shape="rect" coords="250,330,295,348" href="#" alt="창닫기">
+            <area shape="rect" coords="95,332,215,345" href="#" alt="오늘 하루 열지않음">
+        </map>
+    </div>
+    <div id="notice_wrap">
+        <img src="images/popup1.jpg" alt="공지사항">
+        <p class="closeWrap">
+            <input type="checkbox" name="expiresChk" id="expiresChk">
+            <label for="expiresChk">3일동안 이 창 열지않기 </label>
+            <button class="closeBtn">닫기</button>
+        </p>
+    </div>
+
+</body>
+</html>
