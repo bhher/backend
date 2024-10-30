@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/jquery.bxslider.js"></script>   
+<style>
+    *{margin: 0;padding: 0;}
+    header{
+            width:100%;
+            max-width: 960px;
+            height:200px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        section{
+            width:100%;
+            max-width: 960px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        /* css/jquery.bxslider.css 불러내서 images => ../images  변경*/
+</style>
+<script>
+$(function(){
+    $('.bx6').bxSlider({
+        auto:true,
+        moveSlides:1,
+        minSlides:1,//가로 사이즈가 작을때는 1장
+        maxSlides:3,//최대는 3장  - 중간크기에는 2장
+        slideWidth:305,
+        slideMargin:10,
+        shrinkItems:true,//반응형 크기에 맞춰서 조정
+    });
+});
+
+</script>
+
+</head>
+<body>
+    <header>
+        헤더
+    </header>
+    <section>
+        <ul class="bx6">
+            <li><img src="img/images(1).jpg" title="메인사진1 <br> 두줄이당 " alt="사진1"></li>
+            <li><img src="img/images(2).jpg" title="메인사진2" alt="사진2"></li>
+            <li><img src="img/images(3).jpg" title="메인사진3" alt="사진3"></li>
+            <li><img src="img/images(4).jpg" title="메인사진4" alt="사진4"></li>
+            <li><img src="img/images(5).jpg" title="메인사진5" alt="사진5"></li>
+        </ul>
+    </section>
+
+</body>
+</html>

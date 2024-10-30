@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/jquery.bxslider.js"></script>   
+<style>
+    *{margin: 0;padding: 0;}
+    header{
+            width:960px;
+            height:200px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        section{
+            width:960px;
+            height:800px;
+            margin: 0 auto;
+            border: 1px solid red;
+        }
+
+        /* css/jquery.bxslider.css 불러내서 images => ../images  변경*/
+</style>
+<script>
+$(function(){
+    $('.bxslider').bxSlider({
+        auto:true,
+        mode:'fade', // 'horizontal' 기본 'vertical', 'fade'	
+        controls:false, // 화살표 숨기기
+        pager:false, //pager 숨기기
+        speed:500, //사진 한장 넘어가는 속도
+        pause:2000, //실제 슬라이드 속도
+    });
+
+    //https://bxslider.com/options 옵션을 보고 공부
+});
+
+</script>
+
+</head>
+<body>
+    <header>
+        헤더
+    </header>
+    <section>
+        <ul class="bxslider">
+            <li><img src="img/images(1).jpg" alt="사진1"></li>
+            <li><img src="img/images(2).jpg" alt="사진2"></li>
+            <li><img src="img/images(3).jpg" alt="사진3"></li>
+            <li><img src="img/images(4).jpg" alt="사진4"></li>
+            <li><img src="img/images(5).jpg" alt="사진5"></li>
+        </ul>
+    </section>
+
+</body>
+</html>

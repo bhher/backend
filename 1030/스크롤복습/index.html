@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/jquery.mousewheel.min.js"></script>
+    <script src="script/main.js"></script>
+</head>
+<body>
+    <h2>현재스크롤위치 : <span id="stop">000</span></h2>
+    <nav>
+        <ul>
+            <li class="on"><a href="#">MainMenu1</a></li>
+            <li><a href="#">MainMenu2</a></li>
+            <li><a href="#">MainMenu3</a></li>
+            <li><a href="#">MainMenu4</a></li>
+            <li><a href="#">MainMenu5</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="area1"><p>area1</p></div>
+        <div class="area2"><p>area2</p></div>
+        <div class="area3"><p>area3</p></div>
+        <div class="area4"><p>area4</p></div>
+        <div class="area5"><p>area5</p></div>
+    </section>
+    <div id="pdt_basic">
+        <img src="images/pdt_basic.png" alt="">
+    </div>
+
+
+    <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+        <map name="pop" id="'pop'">
+            <area shape="rect" coords="252,330,295,348" href="#" alt="창닫기">
+            <area shape="rect" coords="95,332,215,345" href="#" alt="오늘 하루 열지않음">
+        </map>
+    </div>
+    <div id="notice_wrap">
+        <img src="images/popup1.jpg" alt="공지사항"/>
+        <p class="closeWrap">
+           <input type="checkbox" name="expiresChk" id="expiresChk" >
+           <label for="expiresChk">3일 동안 이 창 열지않기</label>
+        
+           <button class="closeBtn">닫기</button>
+        </p>
+     </div>
+
+
+</body>
+</html>
