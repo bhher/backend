@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+<script>
+    $(function(){  
+     $('.slider').bxSlider({
+        auto:true,
+        controls:false,
+     });
+    }); 
+</script>
+
+<style>
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    a{text-decoration: none;color:#333;}
+    #img_slider{
+		width:640px;
+		margin:0 auto;
+		position:relative;
+	}
+
+    #btn p{
+    position: absolute;
+    top:40%;
+   }
+    #btn p.left_btn{
+	left:20px;
+	}
+  #btn p.right_btn{
+	right:20px;
+	}
+    #btn p a{font-size: 40px; font-weight: bold;  color:#000; }
+    #btn p i:hover{	color:#bbb;	}
+
+#page{
+    width:640px; margin: 0 auto;overflow: hidden;
+}
+
+#page ul{position: relative;}
+#page ul li{
+    float:left;
+    width:14%;
+    height:30px;
+    line-height:30px;
+    box-sizing:border-box;
+    text-align:center;
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div id="img_slider">
+        <ul class="slider">
+            <li>
+                <a href="#"><img src="img/01.JPG" alt=""></a>
+                <h1 class="text0 on">fashion style1</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/02.JPG" alt=""></a>
+                <h1 class="text1 on">fashion style2</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/03.JPG" alt=""></a>
+                <h1 class="text2 on">fashion style3</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/04.JPG" alt=""></a>
+                <h1 class="text3 on">fashion style4</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/05.JPG" alt=""></a>
+                <h1 class="text4 on">fashion style5</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/06.JPG" alt=""></a>
+                <h1 class="text5 on">fashion style6</h1>
+            </li>
+            <li>
+                <a href="#"><img src="img/07.JPG" alt=""></a>
+                <h1 class="text6 on">fashion style7</h1>
+            </li>
+        </ul>
+        <div id="btn">
+            <p class="left_btn">
+                <a href="#"> &lt; </a>
+            </p>
+            <p class="right_btn">
+                <a href="#"> &gt; </a>
+            </p>
+        </div>
+        <div id="page">
+            <ul>
+                <li><a href="#">1번</a></li>
+                <li><a href="#">2번</a></li>
+				<li><a href="#">3번</a></li>
+				<li><a href="#">4번</a></li>
+				<li><a href="#">5번</a></li>
+				<li><a href="#">6번</a></li>
+				<li><a href="#">7번</a></li>
+                <div id="focus"></div>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

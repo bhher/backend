@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+<style>
+*{margin: 0;padding: 0;}
+    header{
+        width:960px;
+        height:200px;
+        margin: 0 auto;
+        background-color: pink;
+    }
+    section{
+        width:960px;
+        height:800px;
+        margin: 0 auto;
+        border: 1px solid red;
+    }
+
+</style>
+<script>
+$(function(){
+//bxSlider 는 pager와 화살표가 기본으로 표시된다.
+//화살표가 보이지 않을시
+// css/jquery.bxslider.css 를 열어서
+// images/ 로 시작하는 부분을 찾아서 ../images로 변경해 준다.
+    $('.bx2').bxSlider({
+        auto : true,
+        mode:'fade', //'horizontal', 'vertical', 'fade'
+        controls : false, //화살표없애기
+        pager : false, //PAGER(블릿없애기)
+    });
+    $('.bx3').bxSlider({
+        auto:true,
+        moveSlides:2, //한번에 슬라이드되는 사진수
+        minSlides:1,  //반응형
+        maxSlides:4,  //반응형
+        slideWidth:230,  //슬라이드 넓이
+        slideMargin:10,  //슬라이드 여백
+    });
+
+});
+</script>
+
+</head>
+<body>
+    <header>헤더</header>
+    <section>
+        <ul class="bx2">
+            <li><img src="images/pic1.jpg" alt=""></li>
+            <li><img src="images/pic2.jpg" alt=""></li>
+            <li><img src="images/pic3.jpg" alt=""></li>
+        </ul>
+        <ul class="bx3">
+            <li><img src="img/images(1).jpg" alt=""></li>
+            <li><img src="img/images(2).jpg" alt=""></li>
+            <li><img src="img/images(3).jpg" alt=""></li>
+            <li><img src="img/images(4).jpg" alt=""></li>
+            <li><img src="img/images(5).jpg" alt=""></li>
+        </ul>
+    </section>
+</body>
+</html>
