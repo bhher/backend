@@ -1,0 +1,87 @@
+#mainVisual{position: relative;width: 100%;overflow: hidden;}
+#mainVisual .visual-item{
+    position: relative;width: 100%;overflow: hidden;
+}
+/* 큰사진 */
+#mainVisual .visual-item > img{
+    width:100%;
+    transform: scale(1.2,1.2);
+    transition: transform 5s ease-in-out;
+    /* 사이즈(scale)를 5초에 간에  transition을 적용*/
+}
+/* 사진안에 글자 */
+#mainVisual .visual-txt{
+    position:absolute; 
+    bottom:10%;
+    left:6%
+}
+/* 사진안의 그림으로된 큰글씨와 글씨로된 작은글씨 */
+#mainVisual .visual-inner-txt{
+    border-left:1px solid rgba(255,255,255,0.3); 
+    padding-left:22px; color:#fff; padding-bottom:30px; 
+}
+
+#mainVisual .visual-inner-txt h2,
+#mainVisual .visual-inner-txt strong,
+#mainVisual .visual-inner-txt span,
+#mainVisual .visual-inner-txt p{
+    display: block;
+    opacity: 0;
+    transform:translateX(10%);/*우측으로 이동*/
+    transition:all 0.5s;
+}
+#mainVisual .visual-inner-txt strong{
+    padding:40px 0 15px;
+    font-size:20px;
+    font-weight:300;
+    transition-delay:0.2s; 
+    line-height:25px
+}
+/* More View 글자 */
+#mainVisual .visual-txt a{
+    margin-left:23px; 
+    color:#fff; 
+    padding:0 42px 5px 0; 
+    transition:all 0.5s 0.8s;
+}
+/* active라는 클래스를 주면 scale 1.2 -> 1 */
+#mainVisual .visual-item.active > img{
+    transform: scale(1,1);
+}
+/* active라는 클래스를 주면 translateX(10%) ->0%  */
+#mainVisual .active .visual-inner-txt h2,
+#mainVisual .active .visual-inner-txt strong,
+#mainVisual .active .visual-inner-txt span,
+#mainVisual .active .visual-inner-txt p{
+    transform:translateX(0%);
+}
+
+#mainVisual .active .visual-inner-txt h2,
+#mainVisual .active .visual-inner-txt strong,
+#mainVisual .active .visual-inner-txt a{
+    opacity: 1.0;
+}
+#mainVisual .active .visual-inner-txt span{
+    opacity:0.73;
+}
+#mainVisual .active .visual-inner-txt p{
+    opacity: 0.54;
+}
+
+#mainVisual .slick-arrow{
+    position:absolute; 
+    bottom:10%; 
+    margin-bottom:270px;width:63px; 
+    height:59px; left:6%; background:none; 
+    border:0; cursor:pointer; z-index:99; font-size:0; 
+    transition:all 0.3s;
+}
+#mainVisual .slick-arrow.slick-prev{
+    background:url(../img/slick/main_visual_prev_btn.png) no-repeat;
+}
+#mainVisual .slick-arrow.slick-next{
+    margin-left:70px;
+    background:url(../img/slick/main_visual_next_btn.png) no-repeat;
+}
+#mainVisual .slick-prev:before,
+#mainVisual .slick-next:before{opacity: 0;}

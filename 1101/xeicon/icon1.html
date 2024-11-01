@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/xeicon.css">
+<style>
+*{margin:0; padding:0;}
+		ul{list-style: none;}
+		ul li{
+			width:100px;
+			height:50px;
+			border:1px solid #333;
+			margin-left:50px;
+		}
+		ul li a{
+			display:block;
+			position: relative;
+			line-height: 50px;
+			color:#333;
+			text-decoration: none;
+			width:100%;
+		}
+        ul li:nth-child(1) a::before{
+            content: "\ec1f";
+            position: absolute;
+            width: 30px;
+			height: 30px;
+            line-height: 30px;
+			top:10px;
+			right:10px;
+            font-family: 'xeicon';
+			font-size: 24px;
+			color:red;
+        }
+        ul li:nth-child(2) a::before{
+            content: "\ebd3";
+            position: absolute;
+            width: 30px;
+			height: 30px;
+            line-height: 30px;
+			top:10px;
+			right:10px;
+            font-family: 'xeicon';
+			font-size: 24px;
+			color:blue;
+        }
+
+
+
+</style>
+
+
+</head>
+<body>
+   <ul>
+        <li><a href="#">twitter</a></li>
+        <li><a href="#">facebook</a></li>
+        <li><a href="#">google</a></li>
+   </ul>  
+</body>
+</html>

@@ -1,0 +1,110 @@
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+.cf:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+section{
+  position:relative;
+  width:100%;
+  height:auto;
+}
+.pc-slide{position: relative;}
+.pc-slide ul{
+  position: relative;
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+}
+.pc-slide ul li{
+  position: relative;  
+  height:auto;
+}
+.pc-slide ul li a{
+  display: block;width:100%;
+}
+.pc-slide ul li a img{
+  display: block;width:100%;height:auto;
+}
+.pc-slide .prev-btn{
+  position: absolute;
+  top:50%;
+  left:50px;
+  transform: translateY(-50%);
+  cursor:pointer;
+}
+.pc-slide .next-btn{
+  position: absolute;
+  top:50%;
+  right:50px;
+  transform: translateY(-50%);
+  cursor:pointer;
+}
+/* pc 도트의 위치변경 */
+.pc-slide  ul.slick-dots{
+	bottom: 50px;width:200px;
+	position: absolute;left:50px;
+}
+.slick-dots li{width:50px;}
+.slick-dots li button{width:50px;}
+.slick-dots li button:before{
+  content: '';
+  width:50px;
+  background-color: grey;
+}
+.play a{
+  display: block;
+  margin-top:10px;
+  margin-left: 10px;
+  width:11px;
+  height:13px;
+  background: url(../img/notice_bn_stop.png);
+}
+.play.on a{
+   background: url(../img/notice_bn_play.png);
+}
+
+
+.mo-slide{
+  display: none;
+}
+
+.mo-slide{position: relative;}
+.mo-slide ul{
+  position: relative;
+  width:100%;
+  height:auto;
+  margin: 0 auto;
+}
+.mo-slide ul li{
+  position: relative;  
+}
+.mo-slide ul li a{
+  display: block;width:100%;
+}
+.mo-slide ul li a img{
+  display: block;width:100%;height:auto;
+}
+.mo-slide .prev-btn{
+  position: absolute;
+  top:50%;
+  left:50px;
+  transform: translateY(-50%);
+  cursor:pointer;
+}
+.mo-slide .next-btn{
+  position: absolute;
+  top:50%;
+  right:50px;
+  transform: translateY(-50%);
+  cursor:pointer;
+}
+@media screen and (max-width:800px) {
+  .pc-slide{
+    display: none;
+  }
+  .mo-slide{
+    display: block;
+  }
+}

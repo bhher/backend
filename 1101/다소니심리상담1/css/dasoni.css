@@ -1,0 +1,245 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700');
+*{margin:0;padding:0}
+.cf::after{content:'';clear:both;display:block}
+a{text-decoration:none;color:#000}
+ul{list-style:none}
+body{font-family: 'NanumSquare', sans-serif;
+	font-size:16.5px; overflow-x:hidden;
+	width:100%; max-width:1920px;
+	min-width:1000px;
+	height:3000px;
+}
+
+.wrap{
+	width:100%;
+}
+.header_out{
+	width:100%;
+	height:111px;
+	position: relative;
+	background: url(../img/header_line.png) repeat-x 50% 100%;
+}
+.header_out header{
+	width:1000px;
+	height:111px;
+	margin: 0 auto;
+}
+.header_out header .header_line{
+	width:100%;
+	height:111px;
+}
+/* 로고 정중앙에 놓기 */
+.header_line .logo img{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+/* 메뉴 */
+header .gnb{
+	position: absolute;
+	top:111px;
+	left:0;
+	width:100%;
+	height:50px;
+	background-color: #fff;
+	z-index: 20;
+}
+.gnb>ul{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	z-index:10;
+} 
+.gnb > ul > li{
+	float:left;
+}
+.gnb > ul > li > a{
+	width:200px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	display: block;
+}
+.gnb ul li ul li{
+	width:200px;
+	/* background-color: aqua; */
+	text-align: center;
+}
+.gnb ul li ul li a{
+	display: inline-block;
+	line-height: 20px;
+	padding: 14px 10px;
+	letter-spacing: -0.025em;
+	/* background-color: pink; */
+}
+.gnb ul li ul li:hover a{
+	background:url(../img/menu_hover.png) 
+	no-repeat 0 0;
+}
+
+.gnb ul li ul{
+	position: absolute;
+	height:0;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.gnb ul:hover li ul{
+	height:350px;
+}
+
+.shadow{
+	position: absolute;
+	top:50px;
+	left:0;
+	width:100%;
+	height:0px;
+	border-top:1px solid #ddd;
+	box-sizing: border-box;
+	transition:all 0.3s;
+	background-color: #fff;
+}
+.gnb ul:hover + .shadow{
+	height:350px;
+	background:#fff url(../img/header_line.png) 
+	repeat-x 50% 0;
+}
+/* 슬라이드 */
+#s1{
+	width: 100%;
+	height:840px;
+	position: relative;
+}
+.s1_tbox{
+	position: absolute;
+	width:30%;
+	border:1px solid #333;
+	margin-top: 60px;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	background: url(../img/main_txt_box.png) no-repeat 50% 50% / cover;
+}
+/* 박스안에 큰글씨 를 70정도 내리고 숨김 */
+.s1_tbox h2{
+	font-size:45px;
+	padding:20px 0;
+	transform:translate(0 ,70px);
+	text-align:center;
+	transition:all 1s;
+	opacity:0;
+}
+/* 박스안에 작은글씨 를 70정도 내리고 숨김 */
+.s1_tbox p{
+	transform:translate(0, 70px);
+	opacity:0;
+	transition:all 1s 1s;
+}
+.s1_tbox h2.on{
+	transform:translate(0 ,0);
+	opacity:1;
+}.s1_tbox p.on{
+	transform:translate(0 ,0);
+	opacity:1;
+}
+
+/* 예약신청 */
+
+#s2{
+	height:635px;
+	padding: 80px 0 40px;
+	box-sizing: border-box;
+	background: url(../img/sec1_bg.jpg);
+}
+.s2_title{
+	width:1000px;
+	height:180px;
+	text-align: center;
+	margin: 0 auto;
+}
+.s2_title h2{
+	font-size: 48px; color:#ff8f2b;
+	margin-top:20px ;
+}
+.s2_title p{
+	font-size:16.5px; color:#666; line-height:30px;
+	margin:30px 0 40px;
+}
+
+.s2_table{
+	width:1000px; height:250px;
+	border-top: 3px solid #ff8f2b;
+	margin: 40px auto 0;
+}
+.s2_table li{
+	width:247px; margin-right: 3px;
+	height:250px; box-sizing: border-box;
+	float:left; margin-top: 1px;
+	text-align: center; padding: 30px;
+}
+.s2_table li:nth-child(1){
+	background: #fff url(../img/sec01_icon.png) no-repeat 50% 50%;
+}
+.s2_table li:nth-child(2){
+	background: #fff url(../img/sec01_icon2.png) no-repeat 50% 50%;
+}
+.s2_table li:nth-child(3){
+	background: #fff url(../img/sec01_icon3.png) no-repeat 50% 50%;
+}
+.s2_table li:nth-child(4){
+	background: #ff8f2b url(../img/sec01_icon4.png) no-repeat 50% 50%;
+}
+.s2_table li p{
+	font-size: 20px; color:#000; margin-top: 20px;
+}
+.s2_apply{
+	display: block;
+	width:116px;height:35px;
+	color:#fff; background: #ff8f2b; border-radius: 17px;
+	text-align: center; line-height: 35px; margin: 110px auto;
+	transition:all 0.5s; border:1px solid #fff;
+}
+
+.s2_table li:nth-child(4) .s2_apply{
+	background: #fff;
+	border:1px solid #ff8f2b;
+	color:#ff8f2b;
+}
+.s2_table  li .s2_apply:hover{
+	background-color:#fff;
+	border:1px solid #ff8f2b;
+	color:#ff8f2b;
+}
+.s2_table li:nth-child(4) .s2_apply:hover{
+	background-color:#ff8f2b;
+	border:1px solid #fff;
+	color:#fff;
+}
+.s2_title img, .s2_title h2, .s2_title p {
+	visibility: hidden;
+}
+
+.s2_title img.slide, .s2_title h2.slide, .s2_title p.slide {
+	animation: slide 1s;
+	visibility: visible;
+}
+@keyframes slide {
+	0%{
+		opacity: 0;
+		transform: translateY(70%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.s2_table li{
+	visibility: hidden;
+}
+.s2_table li.slide{
+	animation: slide 1s;
+	visibility: visible;
+}
+

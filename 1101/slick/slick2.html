@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="js/slick.js"></script>
+<style>
+  *{margin: 0;padding:0;}
+  #s_wrap{width: 100%;}
+  .slider{
+        width: 80%;
+        margin: 100px auto 0;
+    }
+    .slick-slide{
+        margin: 0 20px;
+        transition:all 0.3s ease-in-out;
+        opacity: 0.2;
+    }
+    .slick-slide img{
+        width: 100%;
+    }
+    .slick-active{
+    opacity: 0.5;
+    }
+    .slick-current{
+    opacity: 1;
+    }
+    .slick-prev::before,
+    .slick-next::before{
+        color: black;
+    } 
+    /* 화살표 */
+</style>
+<script>
+$(function(){
+    $('.slick').slick({
+        autoplay:true,//자동슬라이드
+        autoplaySpeed:2000, //슬라이드 속도
+        dots:true, //pager
+        Infinity:true, // 자동슬라이드 무한반복
+        slidesToShow:4, //화면에 보이는 슬라이드 수
+        slidesToScroll:1, //한번에 넘어갈 슬라이드 갯수
+        responsive:[{
+            breakpoint:1024,
+            settings:{ //1024이하일때 바뀔내용
+                slidesToShow:3,
+                slideToscroll:1,
+                dots:true,  
+            }
+        },{
+            breakpoint:600,
+            settings:{ //1024이하일때 바뀔내용
+                slidesToShow:2,
+                slideToscroll:1,
+                dots:true,  
+            }
+        }]
+    });
+
+});
+
+
+</script>
+
+</head>
+<body>
+    <div id="s_wrap">
+        <div class="slick slider">
+            <div>
+                <img src="images/images1.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/images2.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/images3.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/images4.jpg" alt="">
+            </div>
+            <div>
+                <img src="images/images5.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
