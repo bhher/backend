@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get" name="rel_f" id="rel">
+        <fieldset>
+            <legend>관련사이트이동</legend>
+            <select name="rel_select" id="rel_select">
+                <option value="http://nl.go.kr">국립 중앙 도서관</option>
+                <option value="http://nanet.go.kr">국회 도서관</option>
+                <option value="http://dlibrary.go.kr">국가전자 도서관</option>
+            </select>
+            <input type="image" src="images/rel_site_btn.gif" alt="관련사이트이동">
+        </fieldset>
+    </form>
+    <script>
+        //var form = document.forms["rel_f"];
+        //var form = document.forms[0];
+        // 현재 문서내에  모든 <form>을 선택가능
+        var form = document.querySelector('#rel');
+        form.addEventListener('submit',function(e){
+            e.preventDefault();  //폼의 기본 제출 방지
+            var url = form.rel_select.value;
+            //alert(url); 현재 value값을 가지고 와서 url에 임시보관
+            window.open(url);
+            //브라우저 새창을 열어 url을 연결해라
+        });
+
+    </script>
+</body>
+</html>

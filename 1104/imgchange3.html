@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+  ul{width:600px;margin: 0 auto;height:50px;}
+  ul li{float:left;list-style: none;}
+</style>
+</head>
+<body>
+    <!-- html안에 javascript삽입 -->
+    <ul class="gnb">
+        <li>
+            <a href="#">
+                <img src="images/menu01_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu02_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu03_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu04_out.png"  alt="">          
+            </a>
+        </li>
+    </ul>
+<script>
+var links = document.querySelectorAll('.gnb li a');
+links.forEach(function(link){
+    link.addEventListener('mouseenter',function(){
+        //마우스를 올렸을때
+        var img = link.querySelector('img');
+        img.src = img.src.replace('out','over');
+
+        //현재 img.src에 들어 있는 파일명중 out -> over
+    });
+   
+    link.addEventListener('mouseleave',function(){
+        //마우스를 내렸을때
+        var img = link.querySelector('img');
+        img.src = img.src.replace('over','out');
+    });
+
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<style>
+  ul{width:600px;margin: 0 auto;height:50px;}
+  ul li{float:left;list-style: none;}
+</style>
+</head>
+<body>
+    <ul class="gnb">
+        <li>
+            <a href="#">
+                <img src="images/menu01_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu02_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu03_out.png"  alt="">          
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/menu04_out.png"  alt="">          
+            </a>
+        </li>
+    </ul>
+<script>
+$('.gnb li a').hover(function(){
+    //마우스를 올렸을때
+    var imgcg = $('img',this).attr('src').replace('out','over');
+    //menu01_out.png -> menu01_over.png 파일명만 바꾼다.
+    $('img',this).attr("src",imgcg);
+},function(){
+    var imgcg = $('img',this).attr('src').replace('over','out');
+    //menu01_out.png -> menu01_over.png 파일명만 바꾼다.
+    $('img',this).attr("src",imgcg);
+
+});
+
+
+
+</script>
+
+</body>
+</html>

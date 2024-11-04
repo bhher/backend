@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var days = ["일", "월", "화", "수", "목", "금", "토"];
+       var today = new Date();
+       var yoil = today.getDay();
+       //오늘의 요일에 해당하는 값을 반환 일:0  ~ 토:6
+       //alert(yoil); 
+      var yoil1 = days[yoil];
+      document.write(yoil1+"요일 입니다. <br/>"); //오늘의 요일 반환
+    </script>
+</body>
+</html>

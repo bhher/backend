@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+body{}
+
+</style>
+
+</head>
+<body>
+    <button id="colorButton">
+        change background
+    </button>
+    <script>
+       //미리 정의됭색상
+       const colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A6", "#33FFF9", "#F9FF33"];
+       var c = 0; //현재의 인덱스번호
+        document.getElementById('colorButton').addEventListener('click',function(){
+            document.body.style.backgroundColor = colors[c];
+            // c++;
+            // if(c == colors.length){
+            //     c = 0;
+            // }
+            c = (c + 1) % colors.length;
+            
+        });
+
+    </script>
+</body>
+</html>
