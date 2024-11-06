@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        #m1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 30px;
+        }
+
+        #m2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 300px;
+            right: 300px;
+        }
+
+        #m3 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            bottom: 80px;
+            left: 150px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1 id="m1"><img src="img/1.png" /></h1>
+        <h1 id="m2"><img src="img/2.png" /></h1>
+        <h1 id="m3"><img src="img/3.png" /></h1>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('mousemove', function (e) {
+                var x = e.pageX;
+                var y = e.pageY;
+                var element1 = document.getElementById('m1');
+
+                if (element1) {
+                    element1.style.top = (y - 50) + 'px';
+                    element1.style.left = (x - 50) + 'px';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

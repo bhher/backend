@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+*{margin: 0;padding:0;}
+#slider-container{
+  position: relative;
+  width: 100%;
+  max-width:795px;
+  margin: auto;
+  height:450px;
+}
+.slider{
+    width:100%;
+    overflow: hidden;
+}
+.slide{
+    position: absolute;
+    top:0;
+    left:0;
+    visibility: hidden;
+    opacity: 0;
+    width:100%;
+    transition: all 0.5s;
+}
+.slide.on{
+    visibility: visible;
+    opacity: 1;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.pager{
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 8px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+.dot.active{background-color: red;}
+.dot:hover {
+  background-color: #717171;
+}
+
+
+
+
+ </style>   
+</head>
+<body>
+    <div id="slider-container">
+        <div class="slider">
+          <div class="slide fade on">
+            <img src="img/slide1.jpg" alt="Slide 1">
+          </div>
+          <div class="slide fade">
+            <img src="img/slide2.jpg" alt="Slide 2">
+          </div>
+          <div class="slide fade">
+            <img src="img/slide3.jpg" alt="Slide 3">
+          </div>
+        </div>
+    
+        <div class="pager">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+     </div>
+</body>
+</html>
+<script>
+let slideIndex =1;
+showSlides(slideIndex);
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+    let i;
+    const slides = document.getElementsByClassName('slide');
+    const dots = document.getElementsByClassName('dot');
+    if(n > slides.length){
+        slideIndex = 1;
+    }
+    for(i = 0; i < slides.length; i++){
+       slides[i].classList.remove('on');
+    }
+    for(i = 0; i < dots.length; i++){
+        dots[i].classList.remove('active');
+    }
+    slides[slideIndex -1 ].classList.add('on');
+    dots[slideIndex - 1].classList.add('active');
+
+}
+
+
+
+</script>

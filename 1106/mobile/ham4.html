@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $('.ham').click(function () {
+                var st = $(this).hasClass('on');
+                //alert(st);
+                if (st == false) {
+                    $(this).addClass('on');
+                    $('nav').addClass('active');
+                } else {
+                    $('.sub').hide();
+                    $(this).removeClass('on');
+                    $('nav').removeClass('active');
+                }
+
+            });
+
+            $('.sub').hide();
+            $('nav>ul>li>a').click(function () {
+                if ($(this).next('.sub').css('display') == 'none') {
+                    $('.sub').slideUp(500);
+                    $(this).next('.sub').slideDown(500);
+                } else {
+                    $(this).next('.sub').slideUp(500);
+                }
+                return false;
+            });
+
+
+        });
+
+
+
+
+    </script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /* 가로스크롤바 없애기 - 스마트폰 제작시 꼭필요 */
+        header {
+            width: 100%;
+            height: 70px;
+            position: relative;
+            background-color: skyblue;
+        }
+
+        header h1 {
+            line-height: 70px;
+            height: 70px;
+            text-align: center;
+        }
+
+        header p.ham {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            right: 10px;
+            border: 1px dotted #333;
+            text-indent: -9999px;
+            background: url(images/ham.png) no-repeat 50% 50%;
+            cursor: pointer;
+        }
+
+        header p.ham.on {
+            background: url(images/bar.png) no-repeat 50% 50%;
+        }
+
+        nav {
+            width: 200px;
+            background-color: lime;
+            padding: 10px 0;
+            position: absolute;
+            top: 70px;
+            right: -200px;
+            transition: all 0.3s;
+        }
+
+        nav.active {
+            right: 0;
+        }
+
+        nav ul li {
+            /* height:40px; */
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        nav ul li .sub {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Ezen Misa</h1>
+        <p class="ham">메뉴바</p>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">제품소개</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">다운로드</a>
+                <ul class="sub">
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+                </ul>
+            </li>
+
+
+        </ul>
+    </nav>
+</body>
+
+</html>

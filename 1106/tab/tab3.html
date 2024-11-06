@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+        .tab{
+            width: 280px;
+            height: 200px;
+            border: 1px solid #333;
+        }
+        .tab_menu{
+            height: 40px;
+            line-height: 40px;
+            list-style: none;
+        }
+        .tab_menu li{float: left;width: 70px;text-align: center;}
+        .tab_menu li.on{background-color: red;font-weight: bold;color: #fff;}
+
+        .tab_list li{display: none;}
+        .tab_list li.on{display: block;}
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <ul class="tab_menu">
+            <li>공지사항</li>
+            <li>갤러리</li>
+            <li>정보마당</li>
+        </ul>
+        <ul class="tab_list">
+            <li>
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+                <div>공지사항입니다.</div>
+            </li>
+            <li>
+                <div>갤러리입니다.</div>
+                <div>갤러리입니다.</div>
+                <div>갤러리입니다.</div>
+                <div>갤러리입니다.</div>
+            </li>
+            <li>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+                <div>정보마당입니다.</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

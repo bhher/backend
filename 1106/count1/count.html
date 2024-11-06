@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="./jquery.counterup.js"></script>
+    <title>Document</title>
+<script>
+    $(function(){
+		$(".counter").counterUp({
+			delay:10,
+			time:3000
+	
+		});
+		$(".counter1").counterUp({
+			delay:10,
+			time:3000
+	
+		})
+	});
+</script>
+
+</head>
+<body>
+    <h1><span class="counter">95</span></h1>
+	<h1><span class="counter1">1000</span></h1>
+</body>
+</html>

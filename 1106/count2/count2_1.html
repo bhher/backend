@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
+    <script src="./counterup2.js"></script>
+<style>
+body {
+  width: 100%;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+section {
+  display: flex;
+  margin-top: 500px;
+  padding: 0 20px;
+}
+.counter{
+    flex:1 1 0;
+    /* flex: 1 1 0; */
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0% */ 
+    /* flex:1 과같음 */
+    /* flex-grow(flex item의 기본 크기) 보다 늘어날수 있는지 결정 */
+    /* flex-shrink flex-basis(flex item의 기본 크기)보다 줄어들 수 있는지 결정하는 속성*/
+    /*flex-basis : flex item의 기본 크기  */
+
+    padding: 50px;
+    margin: 20px;
+    font-size: 42px;
+    font-weight: bold;
+    background: #ecfcff;
+}
+
+
+</style>
+</head>
+<body>
+    <h1>CounterUp2 + Jquery + Waypoint</h1>
+    <h2>Scroll Down</h2>
+    <section>
+      <div class="counter">120.365</div>
+      <div class="counter">100</div>
+      <div class="counter">500,00</div>
+      <div class="counter">321</div>
+     </section> 
+    <section>
+      <div class="counter">322</div>
+      <div class="counter">210</div>
+      <div class="counter">125</div>
+      <div class="counter">257</div>
+     </section> 
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+
+jQuery(function ($) {
+  "use strict";
+
+  var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+  var $counters = $(".counter");
+
+  /* Start counting, do this on DOM ready or with Waypoints. */
+  $counters.each(function (ignore, counter) {
+    var waypoint = new Waypoint({
+      element: $(this),
+      handler: function () {
+        counterUp(counter, {
+          duration: 5000,
+          delay: 16 });
+
+         this.destroy();
+        
+      },
+      offset: 'bottom-in-view' });
+
+  });
+
+});
+});
+</script>

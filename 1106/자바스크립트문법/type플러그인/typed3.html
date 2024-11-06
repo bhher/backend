@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+	<script src="typed/typed.js"></script>
+<style>
+     body{
+  background: #34495e;
+	color: #ecf0f1;
+	margin: 0;
+	padding: 0;
+  }
+  .banner{
+    display: block;
+    min-height: 200px;
+    width:100%;
+    position: relative;
+  }
+  .typed_wrap{
+    display: block;
+    border:5px solid #ecf0f1;
+    width:290px;
+    height:auto;
+    padding: 30px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .typed_wrap h1{display: inline;}
+
+  /* .typed:after{
+    content:'|';
+    display: inline;
+    animation:blink 0.7s infinite;
+  } */
+
+
+
+
+
+.btns {
+	display: block;
+	width: 400px;
+	margin: 0;
+	padding: 30px 0 0 30px;
+}
+.btns a {
+	display: inline-block;
+	margin-left: 5px;
+}
+.btns a:first-child{margin-left:0}
+.btn {
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ecf0f1;
+	text-decoration: none;
+}
+.btn a{
+	cursor: pointer;
+	border: 1.5px solid #ecf0f1;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px;
+	list-style-type: none;
+	transition: all .3s;
+}
+
+.btn:hover {
+	background: #ecf0f1;
+	color: #34495e;
+}
+</style>
+
+<script>
+$(function(){
+    var typed2 = new Typed('.typed',{
+        strings : ['Developers', 'Designers', 'People.'],
+        typeSpeed:50,
+        startDelay: 1200,
+        backSpeed:50,
+        backDelay:500,
+        loop:true,
+    });
+
+});
+
+</script>
+
+</head>
+<body>
+    <div id="page_wrap">
+        <ul class='btns'>
+         <li class="btn"><a href="">visit the creator of Typed.js</a></li>
+         <li class="btn"><a href="">see my other pens</a></li>
+        </ul>
+        <div class="banner">
+             <div class="typed_wrap">
+                 <h1>We Are <span class="typed"></span></h1>
+             </div>
+         </div>
+      </div>
+</html>

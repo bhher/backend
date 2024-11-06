@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            width: 80px;
+        }
+
+        /*img의 크기 72px - 여백(8px)*/
+
+        h1 {
+            text-align: center;
+        }
+
+        #banner_wrap {
+            width: 260px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #aaa;
+        }
+
+        #banner {
+            width: 800px;
+            border: 1px solid red;
+            height: 54px;
+            /* transition: all 0.5s; */
+        }
+
+        #frame {
+            width: 232px;
+            height: 54px;
+            position: relative;
+            margin: 10px auto;
+            border: 1px solid blue;
+            /* overflow: hidden; */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt="사진1"></a></li>
+
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </p>
+    </div> 
+
+    <script>
+    var show_num = 3; 
+    var total =  $('#banner li').length;
+    var li_w =   $('#banner li').eq(0).width();
+    var copyobj = $('#banner li:lt(3)').clone();
+      //인덱스번호 3번보다 작은 li를 copy해라
+      $('#banner').append(copyobj);
+      // #banner 맨뒤에 copyobj를 추가
+      var num = 0;
+      $('.next').click(function(){
+        if(num == total){
+            num = 0;
+            $('#banner').css('margin-left','0');
+        }
+        num++;
+        $('#banner').stop().animate({marginLeft:-li_w*num},500);
+        return false;
+      });
+      $('.prev').click(function(){
+        if(num == 0){
+            num = 5;
+            $('#banner').css('margin-left',-li_w*num);
+        }
+        num--;
+        $('#banner').stop().animate({marginLeft:-li_w*num},500);
+        return false;
+      });
+      //자동슬라이드
+var id = setInterval(autoplay,3000);
+function autoplay(){
+    if(num == total){
+            num = 0;
+            $('#banner').css('margin-left','0');
+        }
+    num++;
+    $('#banner').stop().animate({marginLeft:-li_w*num},500);
+}
+
+
+    </script>
+</body>
+</html>

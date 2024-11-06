@@ -1,0 +1,203 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+:root {
+    --swiper-theme-color: #fefefe;
+}
+body{font-family: 'Noto Sans KR', sans-serif; }
+.cf:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+/* 공통속성 */
+.container{
+    width:980px; height:inherit; margin: 0 auto;
+}
+.cgv-ad-top{width: 100%; height: 80px; background: #acbed6;}
+.cgv-ad-top .container{position: relative;}
+.cgv-ad-top .container .closeBtn{position: absolute; top:10px; right: 3px}
+#header-content{width:100%;height:113px;border-bottom: 1px solid #ddd;}
+
+#header-content .contents h1{float: left;}
+#header-content .contents h1 > a{display: block;float: left; padding-top: 20px;}
+#header-content .contents h1> a>img{width: 117px; height: 53px}
+#header-content .contents h1 >span{
+    float:left;
+    font-size: 16px;
+    letter-spacing: .313em; /*자간*/
+    line-height: 1.5em;
+    font-weight: 300;
+    padding-top: 50px;
+}
+#header-content .contents .memberInfo-wrap{float: right;}
+#header-content .contents .memberInfo-wrap .mPoint{float: left;}
+#header-content .contents .memberInfo-wrap .mPoint a{display: block;padding-top: 35px;margin-right: 20px;}
+#header-content .contents .memberInfo-wrap ul{overflow: hidden; float: left;padding-top: 27px;}
+#header-content .contents .memberInfo-wrap ul > li{float:left;text-align: center;margin: 0 20px;}
+#header-content .contents .memberInfo-wrap ul > li:last-child{margin-right: 0;}
+#header-content .contents .memberInfo-wrap ul>li>a{display: block;}
+#header-content .contents .memberInfo-wrap ul>li>a>img{width: 36px; height: 36px}
+#header-content .contents .memberInfo-wrap ul>li>span{display: block; color: #666; font-size: 13px;}
+
+#nav-wrap{
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid #f40f0f;
+    box-sizing: border-box;
+}
+.nav{
+    float: left;
+    padding: 12px 0 0 0;
+}
+.nav .navBg{width: 100%; height: 0; background: #ddd; position: absolute; top:244px;
+    left: 0; padding: 0; transition: .3s; z-index: 999999;}
+.nav:hover .navBg{ height: 300px;  padding: 20px 0}
+
+nav ul{width:720px; position: relative;z-index: 999999;}
+.nav ul::after{
+    content:"";
+    position: absolute;
+    top:2px;
+    right:0px;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+}
+
+.nav ul>li{float: left;margin-right: 40px;}
+.nav ul>li>a{
+   display: block;
+   font-size: 16px; color: #222; 
+   line-height: 1.5em;text-decoration: none; 
+   font-weight: bold; padding-bottom: 10px;
+}
+.nav ul>li>dl{
+    position: absolute;line-height: 30px; width: 150px; padding: 0 0 0 5px;
+    box-sizing: border-box; height:0;  border-right: 1px solid #ccc; margin-top: 20px;
+    overflow: hidden; transition: height 0.3s;
+}
+.nav:hover ul>li>dl{height:300px;overflow: visible;}
+.nav ul>li:nth-child(1)>dl{padding-left: 0}
+.nav ul>li:nth-child(2)>dl{left:170px}
+.nav ul>li:nth-child(3)>dl{left:340px}
+.nav ul>li:nth-child(4)>dl{left:510px}
+.nav ul>li:nth-child(5)>dl{left:680px}
+.nav ul>li:nth-child(6)>dl{left:850px; border-right: none}
+.nav ul>li>dl>dt>a{font-weight: bold; color: #000; text-decoration: none;}
+.nav ul>li>dl>dt>a:hover{text-decoration: underline;}
+.nav ul>li>dl>dd>a{font-weight: normal; color: #555; text-decoration: none;}
+.nav ul>li>dl>dd>a:hover{text-decoration: underline;}
+
+.search-wrap{float: right;margin-top: 10px;position: relative;}
+.search-wrap:after{
+    content:"";
+    position: absolute;
+    top:2px;
+    right:0px;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+}
+.search-wrap input{border: none;position: relative;top:-8px;background: none;}
+.search-wrap input:focus{outline: none;}
+.search-wrap img{width: 26px;height: 26px; margin-right: 10px;}
+
+
+#contents{width: 100%}
+#movieChartBeScreen_wrap{
+    width: 100%;
+    height: 461px;
+    background: #ddd;
+}
+#movieChartBeScreen_wrap .container{position: relative;  padding: 50px 0px 60px;}
+.tabBtn_wrap{overflow: hidden;}
+.tabBtn_wrap h3{float: left; margin-right: 40px;}
+.tabBtn_wrap h3:last-child{margin-right: 0;}
+.tabBtn_wrap h3 a{font-size: 26px; color: #666;}
+.tabBtn_wrap h3 a.active{color: #222; font-weight: bold; position: relative;}
+.tabBtn_wrap h3 a.active:after{
+    content: '';
+    width: 1px;
+    height: 14px;
+    background: #ccc;
+    position: absolute;
+    top: 13px;
+    right: -21px;
+}
+#btnReserMovie{
+    position: absolute; top:50px; right:0;
+    border: 1px solid #ccc;
+    padding: 7px 30px 7px 10px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px; 
+    background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
+}
+.movieChart_list{margin-top: 20px;}
+.movieChart_list .listWrap .slideBox{
+    width: 170px;
+    float: left;
+    margin-right: 32px;
+    position: relative;
+    counter-increment: myIndex;
+}
+.movieChart_list .listWrap .slideBox:after{
+    content: counter(myIndex) ;
+    color: #fff;
+    position: absolute;
+    bottom:72px;
+    left: 10px;
+    font-style: italic;
+    font-size: 26px;
+    z-index: 999;
+}
+.movieChart_list .listWrap .slideBox:last-child{margin-right: 0;}
+.movieChart_list .listWrap .slideBox .imgWrap{position: relative; height: 242.52px;  }
+
+.movieChart_list .listWrap .slideBox .imgWrap img{width: 100%}
+.slideBox .imgWrap .movieAgeLimit_wrap{position: absolute;}
+.slideBox .imgWrap .screenType_wrap{position: absolute; right: 10px; bottom: 10px;  width: 34px;}
+.slideBox .imgWrap .screenType_wrap>i{height: 10px;  width: 34px; border: 1px solid rgba(233,233,233,.5); padding: 0}
+.slideBox .imgWrap .screenType_wrap i.screenType{height: 12px}
+.imgWrap .screenType_wrap i.screenType img{width:35px; height: 7px }
+.slideBox .imgWrap .movieChart_btn_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background: rgba(0,0,0,0); 
+    padding: 80px 20px 0 20px;
+    box-sizing: border-box;
+    display: none;
+}
+.imgWrap:hover .movieChart_btn_wrap{ background: rgba(0,0,0,.5); display: block; }
+.slideBox .imgWrap .movieChart_btn_wrap a{
+    display: block;
+    text-align: center;
+    padding: 10px 20px; background: rgba(255,255,255,1);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    font-size: 12px;
+}
+.slideBox .imgWrap .movieChart_btn_wrap a:last-child{
+    background: rgba(255,0,0,1);
+    color: #fff;
+}
+.slideBox .imgWrap .movieChart_btn_wrap a:first-child:hover{
+    background: rgba(255,255,255,.6);
+}
+.slideBox .imgWrap .movieChart_btn_wrap a:last-child:hover{
+    background: rgba(255,0,0,.6);
+}
+.movieChart_list .listWrap .slideBox .movie_info_wrap{text-align: center;}
+.movieChart_list .listWrap .slideBox .movie_info_wrap .movieName{display: block; text-align: center; margin: 10px 0; font-weight: bold;}
+.movieChart_list .listWrap .slideBox .movie_info_wrap span{font-size: 12px;}
+.movieChart_list .listWrap .slideBox .movie_info_wrap span img{width:16px; height: 16px; position: relative; top: 3px }
+
+

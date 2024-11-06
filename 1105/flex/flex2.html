@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .base{
+            width: 300px;
+            height: 300px;
+            background-color: gray;
+            display:flex;
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: nowrap;  */
+            flex-wrap: wrap;
+             /*item의 넓이가 .base 넓이보다 큰경우 , 복수행에 배치  */
+        }
+        .redBox{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            vertical-align: middle;
+            line-height: 150px;
+            text-align: center;
+        }
+        .blueBox{
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            line-height: 150px;
+            text-align: center;
+        }
+        .greenBox{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            line-height: 150px;
+            text-align: center;
+        }
+        .purpleBox{
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+            line-height: 150px;
+            text-align: center;
+        }
+        span{
+            font-size: 45px;
+            margin-bottom: auto;
+            margin-top: auto;
+        }
+    </style>
+  
+</head>
+<body>
+    <div class="base">
+        <div class="redBox"><span>1</span></div>
+        <div class="blueBox"><span>2</span></div>
+        <div class="greenBox"><span>3</span></div>
+        <div class="purpleBox"><span>4</span></div>
+        
+    </div>
+</body>
+</html>

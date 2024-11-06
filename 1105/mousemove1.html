@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.onmousemove = function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+
+            document.getElementById('m1').innerHTML = x;
+            document.getElementById('m2').innerHTML = y;
+        }
+        // $(document).mousemove(function(){}); jquery
+
+    </script>
+
+    <style>
+        #wrap{position: fixed;}
+        body{height: 3000px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1 id="m1">0000</h1>
+        <h1 id="m2">0000</h1>
+    </div>
+</body>
+</html>

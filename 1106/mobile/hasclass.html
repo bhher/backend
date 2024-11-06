@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasClass</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function () {
+            $('h1').click(function () {
+                var status = $(this).hasClass('on');
+                //클릭한 h1이 on이라는 클래스를 가지고 있으면 true
+                //가지고 있지 않다면 false
+                //alert(status);
+                if (status == false) {
+                    $(this).addClass('on');
+                } else {
+                    $(this).removeClass('on')
+                }
+
+                //if($(this).hasClass('on') == false)
+                //addClass - 추가
+                //removeClass - 제거
+                //hasClass() - 확인 (class가 존재하면 - true 거짓이면 -false)
+
+
+            });
+
+        });
+
+    </script>
+
+    <style>
+        h1 {
+            background-color: white;
+        }
+
+        h1.on {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>나는 빨간색</h1>
+</body>
+
+</html>

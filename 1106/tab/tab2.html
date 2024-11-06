@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <style>
+        .tab{display: flex;list-style: none; height:40px;text-align: center;}
+        .tab li{width:70px;line-height: 40px;}
+        .tab li.on{background-color: red;font-weight: bold;color:#fff;}
+
+        .tab_list{width:280px;height:200px;border:1px solid #333;}
+        .tab_list div{display: none;}
+        .tab_list div.on{display: block;}
+
+    </style>
+<script>
+$(function(){
+    $('.tab li').click(function(){
+        var i = $(this).index();//클릭한 인덱스 번호를 변수 i에 대입(반환)
+        //alert(i);
+       $('.tab li').removeClass('on');
+       $('.tab li').eq(i).addClass('on');
+       $('.tab_list div').removeClass('on');
+       $('.tab_list div').eq(i).addClass('on');
+    });
+});
+
+
+</script>
+
+
+
+</head>
+<body>
+    <ul class="tab">
+        <li class="on">1번</li> <!-- index 0 -->
+        <li>2번</li><!-- index 1 -->
+        <li>3번</li><!-- index 2 -->
+    </ul>
+    <div class="tab_list">
+        <div class="on">1번의 내용입니다.</div><!-- index 0 -->
+        <div>2번의 내용입니다.</div><!-- index 1 -->
+        <div>3번의 내용입니다.</div><!-- index 2 -->
+    </div>
+</body>
+</html>

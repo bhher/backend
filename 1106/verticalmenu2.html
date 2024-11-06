@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<style>
+     * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .m_menu {
+            width: 200px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .m_menu>li>a {
+            display: block;
+            height: 36px;
+            background-color: #390;
+            line-height: 36px;
+            border-top: 1px dotted #fff;
+            color: #fff;
+        }
+
+        .m_menu .sub {
+           
+        }
+
+        .m_menu .sub li {
+            background-color: #cf9;
+        }
+
+        .m_menu .sub li a {
+            display: block;
+            line-height: 36px;
+            height: 36px;
+            color: #222;
+        }
+
+        .m_menu .sub li a:hover {
+            background-color: #cf0;
+        }
+</style>
+
+</head>
+<body>
+    <ul class="m_menu">
+        <li>
+            <a href="#">회사소개</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">제품소개</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">커뮤니티</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">다운로드</a>
+            <ul class="sub">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script src="js/script(jq).js"></script>
+</body>
+</html>

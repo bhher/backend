@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            var count = 0;
+            var text1 = $('#text');
+            var msg;
+            var comp;
+            var kkk;
+            main();
+            function main(){
+                msg = text1.text();// #text 안에 글자를 읽어서 msg에 대입
+                //alert(msg);
+                comp = msg.length; //글자의 갯수 -> 31
+                //alert(comp)
+                tatata();
+            }
+
+            function tatata(){
+                if(count <= comp){
+                    kkk = msg.substring(0,count);
+                    text1.text(kkk);
+                    count++;
+                    setTimeout(tatata,100); //재귀함수호출
+                }else{
+                    count=0;
+                    main();
+                }
+            }
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+    <h1 id='text'>타이핑 효과를 시험해 보세요 타다다다다 이렇게 쳐집니다.</h1>
+</body>
+</html>

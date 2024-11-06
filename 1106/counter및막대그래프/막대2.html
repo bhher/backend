@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<style>
+ *{margin: 0;padding: 0;}
+ section{
+  width:100;
+  height:700px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+.section1{
+  background-color:coral;
+}
+.section2{
+  background-color: burlywood;
+}
+
+.section3{
+  background-color:darkslategrey;
+}
+
+ .skills_box{
+    width:600px;
+    height:380px;
+    border:1px solid #333;
+    margin: 100px auto 0;
+  }
+  .skill_n{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .num{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .skillgBg{
+    height:20px;
+    width:220px;
+    background: url(./img/skill_gBg.png) no-repeat;
+  }
+  .skill_g{
+    width:100%;
+    height:20px;
+  }
+
+  .g1{
+    background: url(./img/skill_g-01.png) no-repeat;
+  }
+  .g2{
+    background: url(./img/skill_g-02.png) no-repeat;
+  }
+  .g3{
+    background: url(./img/skill_g-03.png) no-repeat;
+  }
+  .g4{
+    background: url(./img/skill_g-04.png) no-repeat;
+  }
+
+
+</style>
+<script>
+$(function(){
+  var $charts = $('.skills_box>div');
+  var a = 0;
+  $(window).resize(function(){
+    var h = $(window).height();
+    $('section').height(h);
+  });
+  $(window).trigger('resize');
+
+$(window).scroll(function(){
+  var sct = $(window).scrollTop();
+  console.log(sct);
+  if(sct > 400){
+    apercent();
+  }
+
+});
+
+  function apercent(){
+  if(a==0){  //한번만 실행되도록 한다.
+  $charts.each(function(i){
+    var $chart = $(this);
+    var $chartBar = $chart.find('.skill_g').css('width','0%');
+    var $pnum = $chart.find('.num');
+    var pdata = $pnum.text();
+    // console.log(pdata);
+    $pnum.text(0);
+    $({percent:0}).delay(500*i).animate({percent:pdata},{
+      duration:3000,
+      progress:function(){
+        var now = this.percent;
+        $pnum.text(Math.floor(now));
+        $chartBar.css('width',now+'%');
+      }
+    });
+  });
+}
+a=1;
+}
+
+
+});
+
+
+
+</script>
+
+
+</head>
+<body>
+<section class="section1">
+
+</section>
+<section class="section2">
+  <div class='skills_box'>
+    <div class="skill">
+     <div class="skill_n">Adobe Photoshop</div>
+     <div class="skillgBg"><div class="skill_g g1"></div></div>
+     <div class="skill_p"><span class='num'>90</span>%</div>
+    </div>
+    <div class="skill">
+      <div class="skill_n">Adobe Illustrator</div>
+      <div class="skillgBg"><div class="skill_g g2"></div></div>
+      <div class="skill_p"><span class='num'>85</span>%</div>
+     </div>
+     <div class="skill">
+			<div class = "skill_n">Html5/Css</div>
+            <div class="skillgBg"><div class="skill_g g3"></div></div>
+			<div class = "skill_p"><span class="num">90</span>%</div>
+		</div>
+		<div class="skill">
+			<div class = "skill_n">Javascript</div>
+            <div class="skillgBg"><div class="skill_g g4"></div></div>
+			<div class = "skill_p"><span class="num">60</span>%</div>
+		</div>
+  </div>
+</section> 
+<section class="section3"> </section>
+
+
+
+</body>
+</html>

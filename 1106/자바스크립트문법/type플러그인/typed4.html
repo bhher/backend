@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+<meta charset="UTF-8">
+ <title>CodePen - typed.js - example</title>
+  
+<style>
+body {
+	background: #34495e;
+	color: #ecf0f1;
+	margin: 0;
+	padding: 0;
+}
+
+.banner {
+	display: block;
+	min-height: 200px;
+	width: 100%;
+	position: relative;
+}
+.typed_wrap {
+	display: block;
+	border: 4px solid #ecf0f1;
+	width: 290px;
+	height: auto;
+	padding: 30px;
+	
+	/*centers it in the .banner*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.typed_wrap h1 {
+	display: inline;
+}
+
+/*Add custom cursor so it auto inherits font styles*/
+ .typed::after {
+	content: '|';
+	display: inline;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+} 
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor{
+   opacity: 0;
+	display: none;
+} 
+/*Custom cursor animation*/
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.btns {
+	display: block;
+	width: 400px;
+	margin: 0;
+	padding: 30px 0 0 30px;
+}
+.btns a {
+	display: inline-block;
+	margin-left: 5px;
+}
+.btns a:first-child{margin-left:0}
+.btn {
+	font-family: sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #ecf0f1;
+	text-decoration: none;
+}
+a .btn {
+	cursor: pointer;
+	border: 1.5px solid #ecf0f1;
+	border-radius: 5px;
+	display: inline-block;
+	padding: 10px;
+	list-style-type: none;
+	transition: all .3s;
+}
+
+.btn:hover {
+	background: #ecf0f1;
+	color: #34495e;
+}
+</style>
+
+
+</head>
+
+<body translate="no" >
+  <div id="page_wrap">
+	<ul class="btns">
+		<a href="https://www.mattboldt.com/demos/typed-js/" target="_blank"><li class="btn">visit the creator of Typed.js</li></a>
+		<a href="https://codepen.io/merb/" target="_blank"><li class="btn">see my other pens</li></a>
+	</ul>
+	<div class="banner">
+		<div class="typed_wrap">
+			<h1>We Are <span class="typed"></span></h1>
+			<h2>abcdefghijklmnop</h2>
+		</div>
+	</div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
+      <script id="rendered-js" >
+$(function () {
+  $(".typed").typed({
+    strings: ["Developers.", "Designers.", "People."],
+    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+    stringsElement: null,
+    // typing speed
+    typeSpeed: 30,
+    // time before typing starts
+    startDelay: 1200,
+    // backspacing speed
+    backSpeed: 20,
+    // time before backspacing
+    backDelay: 500,
+    // loop
+    loop: true,
+    // false = infinite
+    loopCount: 5,
+    // show cursor
+    showCursor: false,
+    // character for cursor
+    cursorChar: "|",
+    // attribute to type (null == text)
+    attr: null,
+    // either html or text
+    contentType: 'html',
+    // call when done callback function
+    callback: function () {},
+    // starting callback function before each string
+    preStringTyped: function () {},
+    //callback for every typed string
+    onStringTyped: function () {},
+    // callback for reset
+    resetCallback: function () {} });
+
+});
+
+//이 코드에서 $(".typed").typed() 함수는 텍스트를 타이핑하고 백스페이스로 지우는 애니메이션을 구현합니다. 각 옵션이 하는 역할은 다음과 같습니다.
+
+//strings: 타이핑할 문자열 목록입니다. 여기서는 ["Developers.", "Designers.", "People."]가 순서대로 표시됩니다.
+
+//stringsElement: null로 설정되었으며, 문자열을 HTML 요소에서 가져오려면 설정합니다. 예를 들어, <p> 요소로 묶인 텍스트를 읽어올 수 있습니다.
+
+//typeSpeed: 타이핑 속도를 밀리초 단위로 설정합니다. 이 코드에서는 30밀리초로 설정되어 있습니다.
+
+//startDelay: 타이핑 시작 전 대기 시간입니다. 여기서는 1200밀리초 후에 시작됩니다.
+
+//backSpeed: 백스페이스 속도로, 문자열을 지울 때의 속도를 밀리초 단위로 설정합니다. 여기서는 20밀리초로 설정되어 있습니다.
+
+//backDelay: 문자열이 완성된 후 지우기 전 대기 시간입니다. 여기서는 500밀리초입니다.
+
+//loop: true일 때, 애니메이션이 무한 반복됩니다.
+
+//loopCount: 애니메이션 반복 횟수를 지정합니다. 5로 설정되어 있지만, loop가 true로 설정된 경우 무시되어 무한 반복됩니다.
+
+//showCursor: false일 때 커서가 표시되지 않습니다. 커서를 보이게 하려면 true로 설정합니다.
+
+//cursorChar: 커서에 사용할 문자입니다. 여기서는 |로 설정되어 있습니다.
+
+//attr: null일 때 텍스트로 애니메이션이 실행됩니다. attr에 속성을 지정하면 그 속성에 문자열이 적용됩니다.
+
+//contentType: 'html'로 설정하면 HTML을 그대로 렌더링하며, 'text'로 설정하면 일반 텍스트로 렌더링됩니다.
+
+//callback: 애니메이션이 종료된 후 호출할 함수입니다. 여기서는 빈 함수로 설정되어 있습니다.
+
+//preStringTyped: 각 문자열을 타이핑하기 전에 호출되는 콜백 함수입니다.
+
+//onStringTyped: 각 문자열을 완성한 후 호출되는 콜백 함수입니다.
+
+//resetCallback: 애니메이션이 재설정될 때 호출되는 콜백 함수입니다.
+
+
+//# sourceURL=pen.js
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

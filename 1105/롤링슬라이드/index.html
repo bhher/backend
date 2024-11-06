@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+            vertical-align: top;
+        }
+
+        li {
+            list-style: none;
+            float: left;
+            width: 80px;
+        }
+
+        /*img의 크기 72px - 여백(8px)*/
+
+        h1 {
+            text-align: center;
+        }
+
+        #banner_wrap {
+            width: 260px;
+            padding: 10px 20px;
+            margin: 0 auto;
+            border: 1px solid #aaa;
+        }
+
+        #banner {
+            width: 800px;
+            border: 1px solid red;
+            height: 54px;
+            transition: all 0.5s;
+        }
+
+        #frame {
+            width: 232px;
+            height: 54px;
+            position: relative;
+            margin: 10px auto;
+            border: 1px solid blue;
+            /* overflow: hidden; */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt="사진1"></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt="사진1"></a></li>
+
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼">
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼">
+            </a>
+        </p>
+    </div> 
+
+    <script>
+    var list = document.getElementById('banner');
+    var listLi = document.querySelectorAll('#banner li');
+    var show_num = 3; //보이는 사진의 갯수
+    var total = listLi.length; //총사진의 갯수
+    //alert(total);
+    var li_width = document.querySelector('#banner li').offsetWidth;
+    //li 한개의 넓이 80
+    //alert(li_width);
+    for(var i = 0; i < 3; i++){
+        var copyobj = listLi[i].cloneNode(true);
+        //true 는  li 와 자식인 a 와 img 를 포함에서 복사한다.
+        list.append(copyobj); //ul 맨뒤에 추가한다.
+    }
+    //복사한 놈을 banner에 추가해라
+    //사진이 5장에서 8장으로 추가됨
+    //    var copyobj = listLi[0].cloneNode(true);
+    //    list.append(copyobj);
+    //    한장만 복사해 뒤에다 붙이기
+
+    var num = 0;
+    var next = document.querySelector('.next');
+    var prev = document.querySelector('.prev');
+
+    next.addEventListener('click',function(e){
+        e.preventDefault();
+        if(num == total){
+            num = 0;
+            list.style.transition = 'none';
+            list.style.marginLeft = '0px';
+        }
+        setTimeout(function(){
+            num++;
+            list.style.transition = 'margin-left 0.5s';
+            list.style.marginLeft = -li_width * num + 'px';
+        },50);
+
+    });
+
+    prev.addEventListener('click',function(e){
+        e.preventDefault();
+        if(num == 0){
+            num = 5;
+            list.style.transition = 'none';
+            list.style.marginLeft =  -li_width * num + 'px';
+        }
+        setTimeout(function(){
+            num--;
+            list.style.transition = 'margin-left 0.5s';
+            list.style.marginLeft = -li_width * num + 'px';
+        },50);
+
+    });
+    function autoplay(){
+        if(num == total){
+            num = 0;
+            list.style.transition = 'none';
+            list.style.marginLeft = '0px';
+        }
+        setTimeout(function(){
+            num++;
+            list.style.transition = 'margin-left 0.5s';
+            list.style.marginLeft = -li_width * num + 'px';
+        },50);
+    }
+    setInterval(autoplay, 3000);
+    </script>
+</body>
+</html>
