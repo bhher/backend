@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            $('.youtube1').click(function(){
+               var element = $(this);
+               var videoSrc = element.attr('data-video');
+
+               var iframe = '<iframe width="690" height="388" src="'+videoSrc+'" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                element.html(iframe);
+            });
+        });
+    </script>
+    <style>
+        ul{list-style: none;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>autoplay1</li>
+        <li class="youtube1" data-video="https://youtu.be/mQ-PunO-NeA?si=H60MtSpmkIdWOcVn?autoplay=1">
+            <img src="img/bo1.jpg" alt="">
+        </li>
+        <li>autoplay1</li>
+        <li class="youtube1" data-video="https://youtu.be/UT5x660adLU?si=L6rF0eEZuPzp0jOI?autoplay=1">
+            <img src="img/su1.jpg" alt="">
+        </li>
+    </ul>
+</body>
+</html>

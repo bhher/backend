@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+$(function(){
+//     $.getJSON("demo_ajax_json.js", function(result){
+//     $.each(result, function(i, field){
+//       $("div").append(field + " ");
+//     });
+//   });
+
+// $.getJSON("날씨(경로)", function(data){
+//     data 할일
+//   });
+$.getJSON("http://api.openweathermap.org/data/2.5/forecast?id=1835553&appid=cd63accc133fc76e1f94a3f270442688&units=metric", function(data){
+    //alert(data.cod);
+    //alert(data.city.name);
+    // alert(data.list[1].main.temp);
+   });
+
+
+});
+
+
+</script>
+
+</head>
+<body>
+    <h1>Weather api</h1>
+    <h2> - 날씨예보</h2>
+    <div class="ctemp">첫번째온도 : </div>
+    <div class="clowtemp">최저 온도 : </div>
+    <div class="chightemp">최고 온도 : </div>
+    <div class="cicon">아이콘</div>
+    <!-- <img src=" https://openweathermap.org/img/wn/10d@2x.png" alt=""> -->
+</body>
+</html>

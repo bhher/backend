@@ -135,7 +135,52 @@ nav ul{width:720px; position: relative;z-index: 999999;}
     font-size: 14px; 
     background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
 }
-.movieChart_list{margin-top: 20px;}
+.movieChart_list{margin-top: 20px;width:100%;
+    overflow: hidden;
+    position: relative;
+}
+.movieChart_list .prev{
+    position: absolute;
+    top:35%;
+    left:-20px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 9999999;
+}
+.movieChart_list .prev:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    background: url(../img/arrowL.png) no-repeat 9px 7px;
+}
+.movieChart_list .next{
+    position: absolute;
+    top:35%;
+    right:-20px;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 9999999;
+}
+.movieChart_list .next:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    background: url(../img/arrowR.png) no-repeat 9px 7px;
+}
+
+
+
+.movieChart_list .listWrap{width:5000px}
 .movieChart_list .listWrap .slideBox{
     width: 170px;
     float: left;
@@ -153,7 +198,7 @@ nav ul{width:720px; position: relative;z-index: 999999;}
     font-size: 26px;
     z-index: 999;
 }
-.movieChart_list .listWrap .slideBox:last-child{margin-right: 0;}
+/* .movieChart_list .listWrap .slideBox:last-child{margin-right: 0;} */
 .movieChart_list .listWrap .slideBox .imgWrap{position: relative; height: 242.52px;  }
 
 .movieChart_list .listWrap .slideBox .imgWrap img{width: 100%}
@@ -201,3 +246,113 @@ nav ul{width:720px; position: relative;z-index: 999999;}
 .movieChart_list .listWrap .slideBox .movie_info_wrap span img{width:16px; height: 16px; position: relative; top: 3px }
 
 
+#event_wrap{
+    width: 100%;
+    height: 400px;
+    background: #fff;  
+    position: relative;
+    z-index: 99999999999;
+}
+.event_title_wrap{padding-top: 60px;}
+.event_title_wrap h3{
+    float: left; 
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+}
+.event_title_wrap .btn_allView{
+    float: right;
+    border: 1px solid #ccc;
+    padding: 7px 30px 7px 10px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
+}
+.event_title_wrap .btn_eventCntrol{
+    float: right;
+    background: url(../img/stop.png) no-repeat center center/9px 13px;
+    width: 28px;
+    height: 28px;
+    font-size: 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.event_title_wrap .btn_eventCntrol.on{
+    background: url(../img/play.png) no-repeat center center/9px 13px;
+}
+
+.event_list_wrap{
+    width: 980px; margin-top: 30px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+  #specialHall_wrap{
+    width: 100%;
+    height: 400px;
+    background: #fff;
+}
+.specialHall_title_wrap{padding-top: 60px;}
+.specialHall_title_wrap h3{float: left; font-size: 24px; font-weight: bold; 
+    margin-bottom: 20px;}
+.specialHall_title_wrap .btn_allView{
+    float: right;
+    border: 1px solid #ccc;
+    padding: 7px 30px 7px 10px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #222;
+    font-size: 14px;
+    background: url(../img/arrowR_8x13.png) no-repeat 75px center/10px;
+}
+.specialHall_content{margin-top: 50px;}
+.specialHall_content .tapContent{position: relative;float: left;}
+.specialHall_content .tapContent a{
+    width:500px; position: absolute;text-decoration: none; color: #333;
+    display: none;
+}
+.specialHall_content .tapContent a.on{display: block;}
+.specialHall_content .tapContent a .img_wrap img{
+    width:100%;
+}
+
+.specialHall_list{float: right; width: 440px; border-top: 1px solid #ddd}
+.specialHall_list li{
+    border:1px solid transparent;
+    border-bottom-color:  #ddd;box-sizing: border-box;
+}
+.specialHall_list li.on{border:1px solid #464343;}
+.specialHall_list li a{
+    display: flex; justify-content: space-between; padding: 20px;
+    text-decoration: none;color:#333;
+}
+.specialHall_list li a strong{
+    font-size: 18px;font-weight: bold;
+}
+.specialHall_list li a .specialHall_hashTag_wrap{
+    background:rgba(0,0,0,0.05); padding: 5px; border-radius: 5px;
+}
+.specialHall_list li a .specialHall_hashTag_wrap .specialHall_hashTag{
+    font-size: 14px; color: #666;
+}

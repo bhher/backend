@@ -1,0 +1,20 @@
+*{margin: 0;padding: 0;}
+body{height:3300px;}
+.indicator{
+	position:fixed;
+	right:10px;
+	top:10px;
+	background:rgba(255,255,255,0.8);
+}
+div{  height:1050px;}
+div p{	color:#fff;	margin:0;	padding:8px;}
+#area1{	background:url(../img/bg-parallaxsample01.jpg) repeat-x;
+    background-size: cover;
+    	/* background-position-y:200px; */
+        /* background-attachment: fixed; */
+}
+#area2{	background:url(../img/bg-parallaxsample02.jpg) repeat-x; background-size: cover;}
+#area3{	background:url(../img/bg-parallaxsample03.jpg) repeat-x; background-size: cover;}
+#area4{	background:url(../img/bg-parallaxsample04.jpg) repeat-x; background-size: cover;}
+#ashColorArea{	background:#666;}
+#redColorArea{	background:#900;}

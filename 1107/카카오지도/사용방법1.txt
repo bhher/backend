@@ -1,0 +1,24 @@
+1. 구글에서 카카오 api검색
+-로그인 
+-내애프리케이션
+
+새창에서  -카카오 지도 - kakao Maps API
+
+
+2. 오른쪽 상단에 app key발급
+3. javascript키 복사 
+  bceccd594bb478b5533d7d2ec63f8bb0
+
+ 4. https://apis.map.kakao.com/web/guide/
+ html 복사해온다.
+
+ 5. <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=bceccd594bb478b5533d7d2ec63f8bb0"></script>
+ 스크립트를 키값을 넣어서 수정  
+ 5-1. 실행시키면 카카오 본사
+ 6. 본인의 집으로 위경도 알아오기
+ 7. 구글에서 구글맵을 검색
+   -연세it미래교육원
+  
+   
+   목적지 표시에서 손가락 나오면 오른쪽 버튼 
+   이위치공유 - 클릭 - 위경도 복사

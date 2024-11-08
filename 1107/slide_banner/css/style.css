@@ -1,0 +1,54 @@
+*{margin: 0;padding: 0;}
+body{font-size: 12px;font-family: Dotum;
+color:#74767a;line-height: 120%;}
+a{color:#74767a;text-decoration: none;}
+ul{list-style: none;}
+img{border:none;vertical-align: middle;}
+
+#wrap{}
+#brandVisual{
+  position: relative;
+  width:100%;
+  min-width: 1000px;
+  height:500px;
+  background-color: #8c908c;
+  /* overflow: hidden; */
+}
+#brandVisual ul li{
+    position: absolute;
+    width:100%;
+    height:500px;
+}
+#brandVisual .visual_0{
+    left:0;
+    background: url(../img/0.png) 50% 0 no-repeat;
+  }
+  #brandVisual .visual_1{
+    left:100%;
+    background: url(../img/1.png) 50% 0 no-repeat;
+  }
+  #brandVisual .visual_2{
+    left:200%;
+    background: url(../img/2.png) 50% 0 no-repeat;
+  }
+  #buttonList:after{
+	content:''; display:block; clear:both;
+}
+#buttonList{
+    position: absolute;
+    top:215px;
+    left:50%;
+  }
+  #buttonList li{
+    width:14px;
+    height:15px;
+    float:left;
+    margin:0 5px;
+    background:url(../img/btnVisual.png) 0 -16px no-repeat;
+}
+#buttonList li.on{
+    /*background:url(img/btnVisual.png) 0 0px no-repeat;*/
+    background-position:0 0;
+    }
+#buttonList li a{display:block;text-indent:-9999px; }
+  
