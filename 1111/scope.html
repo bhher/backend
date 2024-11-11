@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <script>
+   
+//함수 스코프
+function functionScope(){
+    var x = 10;
+    if (true) {
+        var x = 20;  // 함수 전체에서 유효
+        console.log("블록 내부 x:", x);  // 20 출력
+    }
+    console.log("블록 외부 x:", x);  // 20 출력 (함수 전체에서 x가 20으로 재할당됨)
+
+}
+functionScope(); 
+ </script>   
+</head>
+<body>
+    
+</body>
+</html>

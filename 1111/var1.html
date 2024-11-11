@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function example() {
+    console.log(a); // undefined (호이스팅으로 선언은 되었으나 초기화는 안 됨)
+    var a = 10;
+    var a = 20; // 재선언 가능
+    a = 30; // 재할당 가능
+    console.log(a); // 30
+}
+example();
+
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>

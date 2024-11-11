@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <script>
+   
+//함수 스코프
+function scopeCompare(){
+    var a = 1;
+    let b = 2;
+    
+    if (true) {
+        var a = 3;  // 함수 스코프. 기존 a를 덮어씌움
+        let b = 4;  // 블록 스코프. 새롭게 선언된 b는 이 블록 내에서만 유효
+        console.log("if 블록 내부 - a:", a);  // 3 출력
+        console.log("if 블록 내부 - b:", b);  // 4 출력
+    }
+
+    console.log("if 블록 외부 - a:", a);  // 3 출력
+    console.log("if 블록 외부 - b:", b);  // 2 출력
+}
+scopeCompare(); 
+ </script>   
+</head>
+<body>
+    
+</body>
+</html>

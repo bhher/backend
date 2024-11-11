@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// 객체를 프로퍼티로 품을 수 있음
+const sam = {
+  name: "Sam",
+  info: {
+    age: "20",
+    class: "Javascript",
+  },
+};
+document.write(sam.name,"<br/>");
+document.write(sam.info.age,"<br/>");
+document.write(sam.info["age"],"<br/>");
+document.write(sam["info"].age,"<br/>");
+document.write(sam["info"]["age"],"<br/>");
+// 함수도 담을 수 있음
+sam.etc = function () {
+  return "Bonk!";
+};
+//sam.etc(); // "Bonk!"
+document.write(sam.etc(),"<br/>");
+delete sam.info;
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

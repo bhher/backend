@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+
+function example() {
+    //console.log(b); // ReferenceError: 초기화 전이므로 접근 불가 (TDZ)
+    const c = 10;
+   // const c = 20; // 같은 스코프에서 재선언안됨
+    // c = 30; //재할당 안됨
+
+    console.log(c); // 30
+    const arr = [1, 2, 3];
+    arr.push(4); // 가능 (배열 요소는 수정 가능)
+    console.log(arr); // [1, 2, 3, 4]
+
+}
+example();
+
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>
