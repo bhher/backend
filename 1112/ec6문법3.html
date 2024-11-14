@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+  //2.객체해체
+  const person = {
+    name:"Alice",
+    age: 25,
+    country: "USA"
+  }
+  //객체해체
+  const {name, age, country} = person;
+  console.log(name); //"Alices"
+  console.log(age);     // 25
+  console.log(country); // "USA"
+
+//변수명 변경 및 기본값 설정
+const user = {
+    username:"John Doe",
+    email:"john@exemple.com"
+}
+//변수명 변경하고 ,기본값 설정
+const {username : name1, email, phone="N/A" } = user;
+
+console.log(name1);  // "john_doe"
+console.log(email); // "john@example.com"
+console.log(phone); // "N/A"
+
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>

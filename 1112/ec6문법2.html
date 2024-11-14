@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    //자바스크립트 해체연산자는 배열이나 객체의 값을 쉽게 추출해 변수할당
+    //1.배열해체
+
+    const fruits=["apple","banana","cherry"];
+    //배열해체
+    const [first,second,third] = fruits;
+
+    console.log(first);
+    console.log(second);
+    console.log(third);
+//2.부분해체와 기본값
+const colors = ["red", "green"];
+
+// 세 번째 값은 없으므로 기본값 "blue" 사용
+const [primary, secondary, tertiary = "blue"] = colors;
+
+console.log(primary);   // "red"
+console.log(secondary); // "green"
+console.log(tertiary);  // "blue"
+
+//나머지 요소 ... 연산자로 받을 수도 있습니다.
+const numbers = [1,2,3,4,5];
+
+const [fir,sec, ...rest] = numbers;
+
+console.log(fir);
+console.log(sec);
+console.log(rest);
+
+</script>    
+</head>
+<body>
+    
+</body>
+</html>
