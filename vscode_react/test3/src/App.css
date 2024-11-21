@@ -1,0 +1,10 @@
+.Wrapper{
+  width:80%;
+  height:50%;
+  margin: 0 auto;
+}
+.title{
+  width: 100%;
+  text-align: center;
+  color:red;
+}
