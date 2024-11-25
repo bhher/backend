@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla JS Example</title>
+</head>
+<body>
+  <div>
+    <h1>좋아요 수: <span id="likeCount">0</span></h1>
+    <button id="likeButton">좋아요</button>
+  </div>
+
+  <script>
+    const likeButton = document.getElementById('likeButton');
+    const likeCountSpan = document.getElementById('likeCount');
+    let likeCount = 0;
+
+    likeButton.addEventListener('click', () => {
+      likeCount++;
+      likeCountSpan.textContent = likeCount; // DOM 직접 업데이트
+    });
+  </script>
+</body>
+</html>
+<!-- Dom을 직접 조작해야 하므로 코드가 길어 지고 복잡해짐 -->
+ <!-- 상태관리가 어려워짐 -->

@@ -30,4 +30,4 @@ public class bill1 {
 		System.out.println("일원 " + m1 + "개");
 	}
     }
-}
+
