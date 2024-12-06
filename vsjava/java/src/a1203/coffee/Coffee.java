@@ -17,9 +17,9 @@ public class Coffee {
         return instance;
     }
 
-    ArrayList<String> coffeeList; //커피의 종류
-    ArrayList<Integer> coffeePrice; //커피의 가격
-    Map<String, Integer> menu; //menu [커피종류, 커피가격]
+    ArrayList<String> coffeeList; //커피의 종류 예) [아메리카노, 카푸치노]
+    ArrayList<Integer> coffeePrice; //커피의 가격 [2000, 4500]
+    Map<String, Integer> menu; //menu [커피종류, 커피가격] {아메리카노, 2000}
     
     public void getMenu(){
         menu = new LinkedHashMap<String, Integer>();//순서가 있는 Map
