@@ -1,0 +1,5 @@
+plum=자두
+apple=사과
+pomegranate=석류
+persimmon=감
+peach=복숭아
