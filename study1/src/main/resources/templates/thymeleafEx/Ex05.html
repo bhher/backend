@@ -1,0 +1,22 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>thymeleaf 링크처리 예제 페이지</h1>
+    <div>
+        <a th:href="@{/ex01}">예제1 페이지 이동</a>
+    </div>
+    <div>
+        <a th:href="@{https://www.thymeleaf.org/}">예제1 페이지 이동</a>
+    </div>
+    <div>
+        <a th:href="@{/ex06(param1='파라미터 데이터1', param2='파라이터 데이터2')}">thymeleaf 파라미터 전달</a>
+    </div>
+</body>
+</html>

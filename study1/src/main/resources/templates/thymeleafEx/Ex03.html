@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>순번</td>
+                <td>상품명</td>
+                <td>상품설명</td>
+                <td>가격</td>
+                <td>상품등록일</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="itemDto, status :${itemDtoList} ">
+                <td th:text="${status.index}"></td>
+                <td th:text="${itemDto.itemNm}"></td>
+                <td th:text="${itemDto.itemDetail}"></td>
+                <td th:text="${itemDto.price}"></td>
+                <td th:text="${itemDto.regTime}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

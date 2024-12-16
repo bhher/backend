@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"> <!--템플릿 엔진으로 thymeleaf 사용할 수 있게 함-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p th:text="'안녕하세요.' + ${data}">안녕하세요</p>
+<!--th: thymeleaf, HelloController의 value 값이 데이터에 들어감 -->
+</body>
+</html>
