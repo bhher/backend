@@ -1,0 +1,63 @@
+구글 또는 chatgpt에서 찾아보기
+
+다음 키워드를 구글링하여, 스스로 정리 및 문서화 하시오.
+
+자바 JDK란
+자바 maven gradle
+이클립스 sts 인텔리제이
+
+클라이언트와 서버
+localhost란
+IP주소 포트번호
+UTF-8이란
+
+MVC 패턴이란
+@Controller
+@GetMapping
+mustache란
+
+웹서버 요청 응답 과정
+MVC 패턴 장점
+부트스트랩이란
+머스테치 partial view
+
+
+HTTP GET POST 비교
+@PostMapping
+DTO란
+@ModelAttribute
+
+
+JPA 개념
+JPA 리파지터리란
+JPA Entity 사용법
+@Entity
+@Table
+@Id
+@GeneratedValue
+@Column
+DTO Entity 분리 장점
+JPA CrudRepository
+@Autowired
+
+@PathVariable
+JPA CrudRepository findById 사용법
+@NoArgsConstructor
+Java Optional 사용법
+
+Java Iterable
+Java List Arraylist 차이
+mustache 반복문
+
+HTML a 태그
+HTTP Redirect란
+@Getter
+
+bootstrap btn primary
+HTML input name 속성
+
+
+JPA Repository delete
+Spring RedirectAttributes addFlashAttribute
+Bootstrap Alert
+

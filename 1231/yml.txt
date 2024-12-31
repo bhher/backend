@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/board_crud?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root  # -> 앞서 입력했던 MySQL username 입력
+    password: 1234  # -> 앞서 설정했던 MySQL 비밀번호 입력
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-circular-references: true
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        default_batch_fetch_size: 100 # 배치전략을 위해 필요
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
